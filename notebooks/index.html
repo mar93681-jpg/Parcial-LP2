@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentación de la Librería</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(120deg, #181818, #2d2d2d);
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: #00adb5;
+      color: white;
+      box-shadow: 0 0 10px #00adb5;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #222;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0, 173, 181, 0.3);
+    }
+    h1, h2 {
+      color: #00adb5;
+    }
+    pre {
+      background: #111;
+      padding: 1rem;
+      border-radius: 10px;
+      overflow-x: auto;
+      color: #d4d4d4;
+    }
+    code {
+      color: #ffd369;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+      font-size: 0.9em;
+    }
+    .demo {
+      background: #393e46;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    button {
+      background: #00adb5;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #02c2c9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Presentación de la Librería “MiLibreríaDemo”</h1>
+    <p>Proyecto realizado por Hily y equipo — Curso de Lenguaje de Programación 2</p>
+  </header>
+
+  <section>
+    <h2>Descripción</h2>
+    <p>
+      Esta librería fue creada para demostrar el uso de módulos en Python. 
+      Permite realizar operaciones matemáticas básicas y mostrar mensajes personalizados 
+      de forma sencilla y eficiente.
+    </p>
+
+    <h2>Instalación</h2>
+    <pre><code>pip install MiLibreriaDemo</code></pre>
+
+    <h2>Ejemplo de uso</h2>
+    <pre><code>from MiLibreriaDemo import operaciones
+
+resultado = operaciones.sumar(5, 3)
+print("El resultado es:", resultado)
+    </code></pre>
+
+    <div class="demo">
+      <h3>Demostración interactiva</h3>
+      <p>Haz clic para simular el uso de la librería:</p>
+      <button onclick="usarLibreria()">Ejecutar Ejemplo</button>
+      <p id="resultado" style="margin-top: 1rem; font-weight: bold;"></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Proyecto Académico - Universidad de Ingeniería Informática | desarrollado por el grupo piola uwu
+  </footer>
+
+  <script>
+    function usarLibreria() {
+      const a = 5;
+      const b = 3;
+      const suma = a + b; // simulando función de la librería
+      document.getElementById("resultado").innerText = 
+        `Resultado de operaciones.sumar(${a}, ${b}) → ${suma}`;
+    }
+  </script>
+</body>
+</html>
