@@ -34,8 +34,9 @@ class EstadisticaBase:
         print("----------------------------")
 
 
-# Ejemplo de uso
-if __name__ == "__main__":
-    datos = [10, 20, 30, 40, 50]
-    estadistica = EstadisticaBase(datos)
-    estadistica.resumen()
+
+datos = [10, 20, 30, 40, 50]
+estadistica = EstadisticaBase(datos)
+estadistica.resumen()
+
+
