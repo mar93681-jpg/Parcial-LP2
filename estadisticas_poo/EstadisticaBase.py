@@ -40,7 +40,7 @@ estadistica = EstadisticaBase(datos)
 estadistica.resumen()
 
 
-## Clase base para estadisticas cuantitativas##
+##Clase base para estadisticas cuantitativas##
 from abc import ABC, abstractmethod
 
 class EstadisticaBase(ABC):
