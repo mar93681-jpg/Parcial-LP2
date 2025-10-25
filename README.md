@@ -1,5 +1,12 @@
 # Parcial-LP2
-Evaluación grupal 1 (25%)
+
+**Integrantes**
+- Hilary Penelope, Cruz Cruz
+- Maria Fernanda, Chávez Mendoza
+- Jean Franco, Malvacedo Quiñonez
+- Piero Cesar, Mejia Auccapoma
+
+## Evaluación grupal 1 (25%)
 Indicaciones
 - El examen es grupal y colaborativo: mínimo 3 y máximo 4 integrantes.
 - Fecha límite de entrega de reporte: 28 de octubre (23:55 horas)
