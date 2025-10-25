@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería de Estadísticas POO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Librería de Estadísticas con POO</h1>
+        <p>Una librería Python para análisis estadísticos usando Programación Orientada a Objetos</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#instalacion">Instalación</a></li>
+            <li><a href="#uso">Uso</a></li>
+            <li><a href="#ejemplos">Ejemplos</a></li>
+            <li><a href="#documentacion">Documentación</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="instalacion">
+            <h2> Instalación</h2>
+            <pre><code>pip install estadisticas-poo</code></pre>
+        </section>
+
+        <section id="uso">
+            <h2> Uso Básico</h2>
+            <pre><code>from estadisticas_poo import EstadisticasCuantitativas, EstadisticasCualitativas
+
+# Para datos numéricos
+datos_numericos = [1, 2, 3, 4, 5, 5, 6]
+estadisticas = EstadisticasCuantitativas(datos_numericos)
+print(estadisticas.media())</code></pre>
+        </section>
+
+        <section id="ejemplos">
+            <h2>📈 Ejemplos</h2>
+            <div class="example">
+                <h3>Análisis Cuantitativo</h3>
+                <pre><code># Calcular todas las estadísticas
+resultados = estadisticas.resumen_completo()</code></pre>
+            </div>
+            <div class="example">
+                <h3>Análisis Cualitativo</h3>
+                <pre><code>datos_categoricos = ['A', 'B', 'A', 'C', 'B']
+cualitativas = EstadisticasCualitativas(datos_categoricos)
+tabla_frecuencias = cualitativas.tabla_frecuencias()</code></pre>
+            </div>
+        </section>
+
+        <section id="documentacion">
+            <h2>Documentación</h2>
+            <p>Documentación completa de todas las clases y métodos disponibles.</p>
+            <a href="docs/documentacion.pdf" download>Descargar Documentación PDF</a>
+        </section>
+
+        <section id="equipo">
+            <h2> Equipo de Desarrollo</h2>
+            <div class="team-members">
+                <!-- Aquí lista los miembros del grupo -->
+                 <div class="member">
+                    <h4>Jean</h4>
+                    <p>Responsable: Clase Base y estructura POO</p>
+                </div>
+                 <div class="member">
+                    <h4>María</h4>
+                    <p>Responsable: Estadísticas cualitativas POO</p>
+                </div>
+                 <div class="member">
+                    <h4>Hilary</h4>
+                    <p>Responsable:Estadísticas cuantitativas POO</p>
+                </div>
+                 <div class="member">
+                    <h4>Piero</h4>
+                    <p>Responsable: Integración, polimorfismo y pruebas POO</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Equipo de Estadísticas POO. Todos los derechos reservados.</p>
+        <p><a href="https://github.com/tu-usuario/tu-repositorio">Ver en GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
