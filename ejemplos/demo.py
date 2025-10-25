@@ -1,5 +1,5 @@
 
-from estadisticas import EstadisticaCuantitativa, EstadisticaCualitativa
+from estadisticas_poo import EstadisticaCuantitativa, EstadisticaCualitativa
 
 # Prueba para cuantitativa
 datos_numeros = [10, 20, 30, 40, 50]
