@@ -125,7 +125,7 @@ class EstadisticaCuantitativa(EstadisticaBase):
 print("CLASE CUANTITATIVA")
 
 # --- PRUEBA INMEDIATA ---
-print("\nProbando la clase 🦅:")
+print("\nProbando la clase:")
 datos = [23, 45, 67, 12, 89, 45, 23, 67, 45, 78, 90, 34, 56]
 estadistica = EstadisticaCuantitativa(datos)
 print("Creado exitosamente uu")
