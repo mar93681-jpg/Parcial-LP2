@@ -1,6 +1,10 @@
 # Parcial-LP2
 
 **Integrantes**
+- Hilary Penelope, Cruz Cruz
+- Maria Fernanda, Chávez Mendoza
+- Jean Franco, Malvacedo Quiñonez
+- Piero Cesar, Mejia Auccapoma
 
 Evaluación grupal 1 (25%)
 Indicaciones
