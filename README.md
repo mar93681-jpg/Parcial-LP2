@@ -1,4 +1,7 @@
 # Parcial-LP2
+
+**Integrantes**
+
 Evaluación grupal 1 (25%)
 Indicaciones
 - El examen es grupal y colaborativo: mínimo 3 y máximo 4 integrantes.
