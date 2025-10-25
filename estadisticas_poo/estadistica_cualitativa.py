@@ -1,4 +1,5 @@
 #Creación de subclase para Estadísticas Cualitativas
+from EstadisticaBase import EstadisticaBase
 
 class EstadisticaCualitativa(EstadisticaBase):
     
@@ -91,27 +92,3 @@ if __name__ == "__main__":
     datos_categorias_num = [1, 2, 5, 2, 1, 5, 5, 3, 2, 5]
     est_cualitativa_num = EstadisticaCualitativa(datos_categorias_num)
     est_cualitativa_num.resumen()
-
---- EJEMPLO: DATOS CUALITATIVOS (STRINGS)  ---
------ RESUMEN DE DATOS (CUALITATIVOS) -----
-Cantidad de datos: 8
-Moda(s): rojo
-
---- Tabla de Frecuencias ---
-  - rojo: 3
-  - azul: 2
-  - verde: 2
-  - amarillo: 1
------------------------------------------------------
-
---- EJEMPLO: DATOS CUALITATIVOS (NÚMEROS)  ---
------ RESUMEN DE DATOS (CUALITATIVOS) -----
-Cantidad de datos: 10
-Moda(s): 5
-
---- Tabla de Frecuencias ---
-  - 5: 4
-  - 2: 3
-  - 1: 2
-  - 3: 1
------------------------------------------------------
