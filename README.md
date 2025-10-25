@@ -8,13 +8,13 @@
 
 ## Tabla de Contenidos (Archivos del Repositorio)
 
-1. [Base de Estadísticas (EstadisticaBase.py)](EstadisticaBase.py)
-2. [Inicializador (__init__.py)](__init__.py)
-3. [Estadística Avanzada (estadistica_avanzada.py)](estadistica_avanzada.py)
-4. [Estadística Cualitativa (estadistica_cualitativa.py)](estadistica_cualitativa.py)
-5. [Estadística Cuantitativa (estadistica_cuantitativa.py)](estadistica_cuantitativa.py)
-6. [Módulo Principal (main.py)](main.py)
-7. [Simulador de Datos (simular_datos.py)](simular_datos.py)
+1. [Base de Estadísticas (EstadisticaBase.py)](estadisticas_poo/EstadisticaBase.py)
+2. [Inicializador (__init__.py)](estadisticas_poo/__init__.py)
+3. [Estadística Avanzada (estadistica_avanzada.py)](estadisticas_poo/estadistica_avanzada.py)
+4. [Estadística Cualitativa (estadistica_cualitativa.py)](estadisticas_poo/estadistica_cualitativa.py)
+5. [Estadística Cuantitativa (estadistica_cuantitativa.py)](estadisticas_poo/estadistica_cuantitativa.py)
+6. [Módulo Principal (main.py)](estadisticas_poo/main.py)
+7. [Simulador de Datos (simular_datos.py)](estadisticas_poo/simular_datos.py)
    
 ## Evaluación grupal 1 (25%)
 Indicaciones
