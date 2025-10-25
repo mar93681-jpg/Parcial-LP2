@@ -1,6 +1,23 @@
 from abc import ABC, abstractmethod
 import math
 
+# --- CLASE BASE ---
+class EstadisticaBase(ABC):
+    def __init__(self, datos):
+        if not isinstance(datos, (list, tuple)):
+            raise TypeError("Los datos deben estar en una lista o tupla.")
+        self.datos = list(datos)
+    
+    @abstractmethod
+    def promedio(self): pass
+    @abstractmethod
+    def minimo(self): pass
+    @abstractmethod
+    def maximo(self): pass
+    @abstractmethod
+    def resumen(self): pass
+    def cantidad_datos(self): return len(self.datos)
+    def tipo_datos(self): return self.__class__.__name__
 
 # --- CLASE CUANTITATIVA COMPLETA ---
 class EstadisticaCuantitativa(EstadisticaBase):
