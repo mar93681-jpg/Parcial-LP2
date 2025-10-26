@@ -36,10 +36,10 @@
 
 | Integrante   | Aporte   |
 |---------------|----------|
-| Jean Franco   | Tarea 1: Arquitectura y Clase Base (25%)  |
-| Hilary        | Tarea 2: Estadísticas Cuantitativas (25%)  |
-| Mario         | Tarea 3: Estadísticas Cualitativas (25%)  |
-| Piero         | Tarea 4: Integración, Polimorfismo y Pruebas (25%)  |
+| Malvacedo Quiñonez, Jean Franco  | Tarea 1: Arquitectura y Clase Base (25%)  |
+| Cruz Cruz, Hilary Penelope       | Tarea 2: Estadísticas Cuantitativas (25%)  |
+| Maria Fernanda, Chávez Mendoza   | Tarea 3: Estadísticas Cualitativas (25%)  |
+| Mejia Auccapoma, Piero Cesar     | Tarea 4: Integración, Polimorfismo y Pruebas (25%)  |
 
 ---
 
@@ -58,14 +58,6 @@
 
 El proyecto está dividido en tres módulos:
 
-```text
-📦 Proyecto_Estadistico/
- ┣ 📜 estadistica_cuantitativa.py
- ┣ 📜 estadistica_cualitativa.py
- ┣ 📜 simular_datos.py
- ┣ 📜 datos_simulados.csv
- ┗ 📜 main.py
-
 ## Tabla de Contenidos (Archivos del Repositorio)
 
 1. [Base de Estadísticas (EstadisticaBase.py)](libreria/estadisticas_poo/EstadisticaBase.py)
@@ -74,5 +66,14 @@ El proyecto está dividido en tres módulos:
 4. [Estadística Cuantitativa (estadistica_cuantitativa.py)](libreria/estadisticas_poo/estadistica_cuantitativa.py)
 5. [Módulo Principal (main.py)](libreria/estadisticas_poo/main.py)
 6. [Simulador de Datos (simular_datos.py)](Data/datos_simulados.csv)
+
+```text
+📦 Proyecto_Estadistico/
+ ┣ 📜 estadistica_cuantitativa.py
+ ┣ 📜 estadistica_cualitativa.py
+ ┣ 📜 simular_datos.py
+ ┣ 📜 datos_simulados.csv
+ ┗ 📜 main.py
+
    
 
