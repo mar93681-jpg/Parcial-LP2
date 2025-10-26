@@ -1,6 +1,3 @@
-# Título de mi Presentación
-## Un subtítulo genial
-### Por: Mi Nombre
 <table>
   <tr>
     <td style="padding-right: 20px;">
@@ -13,5 +10,9 @@
     </td>
   </tr>
 </table>
+# Título de mi Presentación
+## Un subtítulo genial
+### Por: Mi Nombre
+
 ---
 
