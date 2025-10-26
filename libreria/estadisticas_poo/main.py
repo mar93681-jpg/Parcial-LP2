@@ -30,9 +30,9 @@ def main():
     estados = [f['Estado_civil'] for f in datos]
 
     # Crear objetos de análisis
-    estad_edad = estadisticaCuantitativa(edades)
+    estad_edad = EstadisticaCuantitativa(edades)
     estad_ingreso = EstadisticaCuantitativa(ingresos)
-    estad_horas = estadisticaCuantitativa(horas)
+    estad_horas = EstadisticaCuantitativa(horas)
     estad_gasto = EstadisticaCuantitativa(gastos)
 
     estad_color = EstadisticaCualitativa(colores)
