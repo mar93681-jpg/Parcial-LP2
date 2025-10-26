@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-
 setup(
     name="estadisticas-poo",
     version="1.0.0",
