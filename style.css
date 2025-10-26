@@ -134,23 +134,22 @@ td.texto {
     line-height: 1.6; 
 }
 
-/* === BLOQUE DE CÓDIGO PYTHON === */
+
 .codigo-slide {
-    align-items: flex-start; /* alinear todo a la izquierda */
-    padding-left: 6%;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centramos el contenido */
+    justify-content: flex-start; /* empezamos desde arriba */
+    padding-top: 6rem;  /* deja espacio para el header fijo */
+    background: #f8f8f8;
 }
 
-.codigo-pequeno {
-    width: 80%;
-    max-height: 380px; /* limita la altura del cuadro */
-    overflow-y: auto; /* agrega scroll si el código es largo */
-    background-color: #282c34;
+.codigo-scroll {
+    max-height: 400px;
+    overflow-y: auto;
+    background: #1e1e1e;
     color: #f8f8f2;
-    padding: 1.2rem;
-    border-radius: 10px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    text-align: left;
+    padding: 1em;
+    border-radius: 8px;
+    font-family: monospace;
 }
