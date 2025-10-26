@@ -1,11 +1,10 @@
 # Parcial-LP2
-
 <table>
   <tr>
     <td style="padding-right: 20px;">
-      <img src="https://www.lamolina.edu.pe/portada/html/acerca/escudos/download/color/1193x1355_ESCUDOCOLOR.png" width="115" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Unalm_logo.png" width="115" />
     </td>
-    <td style="vertical-align: top; font-size: 20px; line-height: 1.0; padding: 10px;">
+    <td style="vertical-align: top; font-size: 20px; line-height: 1.0;">
       <strong>Universidad Nacional Agraria La Molina</strong><br><br>
       Facultad de Economía y Planificación<br><br>
       Departamento de Estadística e Informática
@@ -13,11 +12,59 @@
   </tr>
 </table>
 
-**Integrantes**
-- Hilary Penelope, Cruz Cruz
-- Maria Fernanda, Chávez Mendoza
-- Jean Franco, Malvacedo Quiñonez
-- Piero Cesar, Mejia Auccapoma
+# Lenguaje de Programación II
+
+**Docente:** Ana Cecilia Vargas Paredes  
+📧 *anavargas@lamolina.edu.pe*  
+🕒 *Horario de atención:* Martes y jueves, 11:00 – 12:00 h  
+🏫 *Oficina:* N.º 13, Facultad de Economía y Planificación  
+
+---
+
+## 🧮 Evaluación Grupal 1 (25%)
+
+**Tema:**  
+> Desarrollo de una librería en Python que realice estadísticas básicas utilizando Programación Orientada a Objetos (POO).  
+> Incluye clases, herencia y polimorfismo para el análisis de datos cuantitativos y cualitativos.
+
+**Fecha de entrega:** 28 de octubre (23:55 h)  
+**Fecha de presentación:** 30 de octubre  
+
+---
+
+## 👥 Integrantes del grupo
+
+| Integrante   | Aporte   |
+|---------------|----------|
+| Jean Franco   | Tarea 1: Arquitectura y Clase Base (25%)  |
+| Hilary        | Tarea 2: Estadísticas Cuantitativas (25%)  |
+| Mario         | Tarea 3: Estadísticas Cualitativas (25%)  |
+| Piero         | Tarea 4: Integración, Polimorfismo y Pruebas (25%)  |
+
+---
+
+## 📋 Descripción del caso
+
+> **Objetivo:**  
+> Desarrollar un paquete o librería en Python que realice **estadísticas básicas** (resúmenes) para datos cuantitativos y cualitativos utilizando principios de **Programación Orientada a Objetos (POO)**.
+
+**Estadísticas consideradas:**
+- **Cuantitativas:** media, mediana, desviación estándar, percentiles, etc.  
+- **Cualitativas:** moda(s) y tabla de frecuencia.
+
+---
+
+## 🧩 Estructura del proyecto
+
+El proyecto está dividido en tres módulos:
+
+```text
+📦 Proyecto_Estadistico/
+ ┣ 📜 estadistica_cuantitativa.py
+ ┣ 📜 estadistica_cualitativa.py
+ ┣ 📜 simular_datos.py
+ ┣ 📜 datos_simulados.csv
+ ┗ 📜 main.py
 
 ## Tabla de Contenidos (Archivos del Repositorio)
 
@@ -28,22 +75,4 @@
 5. [Módulo Principal (main.py)](libreria/estadisticas_poo/main.py)
 6. [Simulador de Datos (simular_datos.py)](Data/datos_simulados.csv)
    
-## Evaluación grupal 1 (25%)
-Indicaciones
-- El examen es grupal y colaborativo: mínimo 3 y máximo 4 integrantes.
-- Fecha límite de entrega de reporte: 28 de octubre (23:55 horas)
-- Fecha de presentación (exposición): 30 de octubre
-Descripción del caso:
-Elaborar o desarrollar un paquete o librería en Python que realice estadísticas básicas o estándares de un conjunto de datos usando elementos de POO (clases, herencia, polimorfismo, etc). Sugerencia de contenido: estadísticas resúmenes para datos cuantitativos, por ejemplo: media, mediana, desviación estándar algunos percentiles, etc y para datos cualitativos: moda (s), tabla de frecuencia.
-IMPORTANTE: la evaluación es grupal las entregas individuales NO serán calificadas
 
-
-## RÚBRICA DE CALIFICACIÓN
-
-| **Criterio** | **0 puntos** | **2 puntos** | **5 puntos** |
-|---------------|--------------|---------------|---------------|
-| **GRUPAL: Diseño de la librería** | No realiza | El diseño es poco coherente con los temas encargados | El diseño es entendible y coherente con los temas encargados |
-| **Distribución del trabajo (5 puntos)** | No realiza | El diseño es poco coherente con los temas encargados | El diseño es entendible y coherente con los temas encargados |
-| **INDIVIDUAL: Número de veces de colaboración. Número de commits (5 puntos)** | No realiza | Evidencia pocas veces de colaboración | Evidencia alta de veces de colaboración |
-| **INDIVIDUAL: Relevancia de colaboración y/o aporte (5 puntos)** | No realiza | Poca relevancia en sus contribuciones | Alta relevancia en sus contribuciones |
-| **INDIVIDUAL: Exposición (5 puntos)** | No realiza | No justifica o explica su contribución o aporte | Justifica, explica completa y coherentemente su contribución o aporte |
