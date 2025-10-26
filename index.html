@@ -196,6 +196,9 @@ footer {
     <section class="codigo-slide">
         <br></br>
         <h2>Estadística básica</h2>
+        <p>
+            La clase <strong>EstadisticaBase</strong> es una clase abstracta que sirve como base para otras clases de estadísticas. Recibe un conjunto de datos (lista o tupla de números) y realiza validaciones para asegurarse de que los datos sean válidos. Define cuatro métodos abstractos (<strong>promedio</strong>, <strong>minimo</strong>, <strong>maximo</strong>, <strong>resumen</strong>) que deben ser implementados por las clases hijas, mientras que también proporciona métodos concretos como <strong>cantidad_datos</strong>, que devuelve el número de elementos, y <strong>tipo_datos</strong>, que devuelve el nombre de la clase. Esto permite crear diversas implementaciones específicas de estadísticas, asegurando consistencia en la estructura.
+        </p>
         <div class="codigo-scroll">
 <pre><code>
 from abc import ABC, abstractmethod
@@ -222,7 +225,18 @@ class EstadisticaBase(ABC):
 
     def tipo_datos(self):
         return self.__class__.__name__
+</code></pre>
+        </div>
+    </section>
 
+    <section class="codigo-slide">
+        <br></br>
+        <h2>Estadística básica</h2>
+        <p>
+            La clase <strong>EstadCB</strong> es una implementación concreta de la clase abstracta <strong>EstadisticaBase</strong>. Proporciona métodos para calcular el promedio, el valor mínimo, el valor máximo y un método para imprimir un resumen completo de las estadísticas de los datos.
+        </p>
+        <div class="codigo-scroll">
+<pre><code>
 class EstadCB(EstadisticaBase):
     def promedio(self):
         return sum(self.datos) / len(self.datos) if self.datos else 0
@@ -244,6 +258,212 @@ class EstadCB(EstadisticaBase):
 </code></pre>
         </div>
     </section>
+
+    <section class="codigo-slide">
+        <br></br>
+        <h2>Estadísticas Cuantitativas</h2>
+        <p>
+            La clase <strong>EstadisticaCuantitativa</strong> realiza análisis estadísticos sobre datos numéricos, calculando medidas como media, mediana, moda, varianza, desviación estándar, cuartiles, y más. Incluye un método <strong>resumen</strong> para mostrar un informe completo de las estadísticas.
+        </p>
+        <div class="codigo-scroll">
+<pre><code>
+class EstadisticaCuantitativa(EstadisticaBase):
+    def __init__(self, datos):
+        if not isinstance(datos, (list, tuple)):
+            raise TypeError("Los datos deben estar en una lista o tupla.")
+        for dato in datos:
+            if not isinstance(dato, (int, float)):
+                raise TypeError(f"Todos los datos deben ser numéricos. Encontrado: {type(dato)}")
+        self.datos = list(datos)
+        self._datos_ordenados = None
+    
+    def _ordenar_datos(self):
+        if self._datos_ordenados is None:
+            self._datos_ordenados = sorted(self.datos)
+        return self._datos_ordenados
+    
+    def media(self):
+        if not self.datos: return None
+        return sum(self.datos) / len(self.datos)
+    
+    def mediana(self):
+        if not self.datos: return None
+        datos_ordenados = self._ordenar_datos()
+        n = len(datos_ordenados)
+        if n % 2 == 1: return datos_ordenados[n // 2]
+        else: return (datos_ordenados[n // 2 - 1] + datos_ordenados[n // 2]) / 2
+    
+    def moda(self):
+        if not self.datos: return []
+        frecuencias = {}
+        for dato in self.datos:
+            frecuencias[dato] = frecuencias.get(dato, 0) + 1
+        max_freq = max(frecuencias.values())
+        return [k for k, v in frecuencias.items() if v == max_freq]
+    
+    def varianza(self, poblacional=True):
+        if len(self.datos) < 2: return None
+        media_val = self.media()
+        n = len(self.datos)
+        divisor = n if poblacional else n - 1
+        return sum((x - media_val) ** 2 for x in self.datos) / divisor
+    
+    def desviacion_estandar(self, poblacional=True):
+        varianza_val = self.varianza(poblacional)
+        return math.sqrt(varianza_val) if varianza_val is not None else None
+    
+    def rango(self):
+        if not self.datos: return None
+        return self.maximo() - self.minimo()
+    
+    def rango_intercuartilico(self):
+        q1, q3 = self.percentil(25), self.percentil(75)
+        return q3 - q1 if q1 and q3 else None
+    
+    def percentil(self, percentil):
+        if not self.datos: return None
+        if percentil < 0 or percentil > 100:
+            raise ValueError("El percentil debe estar entre 0 y 100")
+        datos_ordenados = self._ordenar_datos()
+        n = len(datos_ordenados)
+        pos = (percentil / 100) * (n - 1)
+        pos_entera = int(pos)
+        pos_decimal = pos - pos_entera
+        if pos_entera == n - 1: return datos_ordenados[-1]
+        else: return (datos_ordenados[pos_entera] * (1 - pos_decimal) + datos_ordenados[pos_entera + 1] * pos_decimal)
+    
+    def cuartiles(self):
+        return (self.percentil(25), self.percentil(50), self.percentil(75))
+    
+    def coeficiente_variacion(self):
+        media_val, desv_estandar = self.media(), self.desviacion_estandar()
+        if not media_val or not desv_estandar or media_val == 0: return None
+        return (desv_estandar / media_val) * 100
+    
+    # --- MÉTODOS OBLIGATORIOS ---
+    def minimo(self): return min(self.datos) if self.datos else None
+    def maximo(self): return max(self.datos) if self.datos else None
+    def promedio(self): return self.media()
+    def resumen(self):
+        print("=" * 50)
+        print("     RESUMEN ESTADÍSTICAS CUANTITATIVAS")
+        print("=" * 50)
+        if not self.datos:
+            print("No hay datos para analizar.")
+            return
+        print(f"Cantidad: {self.cantidad_datos()}")
+        print(f"Mínimo: {self.minimo():.2f}")
+        print(f"Máximo: {self.maximo():.2f}")
+        print(f"Rango: {self.rango():.2f}")
+        print("\n--- TENDENCIA CENTRAL ---")
+        print(f"Media: {self.media():.2f}")
+        print(f"Mediana: {self.mediana():.2f}")
+        print(f"Moda: {self.moda()}")
+        print("\n--- DISPERSIÓN ---")
+        print(f"Varianza: {self.varianza():.2f}")
+        print(f"Desviación: {self.desviacion_estandar():.2f}")
+        print(f"Coef. variación: {self.coeficiente_variacion():.2f}%")
+        print("\n--- CUARTILES ---")
+        q1, q2, q3 = self.cuartiles()
+        print(f"Q1: {q1:.2f}, Q2: {q2:.2f}, Q3: {q3:.2f}")
+        print(f"IQR: {self.rango_intercuartilico():.2f}")
+        print("=" * 50)
+</code></pre>
+        </div>
+    </section>
+
+    <section class="codigo-slide">
+        <br></br>
+        <h2>Estadísticas cualitativas</h2>
+        <p>
+            La clase <strong>EstadisticaCualitativa</strong> analiza datos no numéricos, calculando la moda y generando una tabla de frecuencias. Sobrescribe métodos incompatibles como promedio, mínimo y máximo, y ofrece un <strong>resumen</strong> completo de las estadísticas claves.
+        </p>
+        <div class="codigo-scroll">
+<pre><code>
+from EstadisticaBase import EstadisticaBase
+
+class EstadisticaCualitativa(EstadisticaBase):
+    
+    def __init__(self, datos):
+        
+        if not isinstance(datos, (list, tuple)):
+            raise TypeError("Los datos deben estar en una lista o tupla.")
+        self.datos = datos
+
+    # --- Implementación de nuevos métodos ---
+
+    def moda(self):
+        if not self.datos:
+            return []
+            
+        frecuencias = self.tabla_frecuencias()
+        
+        if not frecuencias:
+            return []
+
+        # Encontrar la frecuencia máxima
+        max_freq = max(frecuencias.values())
+
+        # Recolectar todas las claves que tengan esa frecuencia máxima
+        modas = [k for k, v in frecuencias.items() if v == max_freq]
+        
+        return modas
+
+    def tabla_frecuencias(self):
+        
+        frecuencias = {}
+        for item in self.datos:
+            if item in frecuencias:
+                frecuencias[item] += 1
+            else:
+                frecuencias[item] = 1
+        return frecuencias
+
+    # --- Sobrescritura de métodos incompatibles ---
+
+    def promedio(self):
+        return None
+
+    def minimo(self):
+        try:
+            return min(self.datos) if self.datos else None
+        except TypeError:
+            return "N/A (tipos mixtos)"
+
+    def maximo(self):
+        try:
+            return max(self.datos) if self.datos else None
+        except TypeError:
+            return "N/A (tipos mixtos)"
+
+    def resumen(self):
+        
+        print("----- RESUMEN DE DATOS (CUALITATIVOS) -----")
+        print(f"Cantidad de datos: {self.cantidad_datos()}")
+        
+        mods = self.moda()
+        print(f"Moda(s): {', '.join(map(str, mods)) if mods else 'N/A'}")
+
+        print("\n--- Tabla de Frecuencias ---")
+        frecuencias = self.tabla_frecuencias()
+        
+        if not frecuencias:
+            print("No hay datos.")
+        else:
+            
+            frecuencias_ordenadas = sorted(
+                frecuencias.items(), 
+                key=lambda par: par[1], 
+                reverse=True
+            )
+            
+            for item, cuenta in frecuencias_ordenadas:
+                print(f"  - {item}: {cuenta}")
+        
+        print("-----------------------------------------------------")
+</code></pre>
+        </div>
+    </section>    
 
     <section>
         <h2>Conclusiones</h2>
