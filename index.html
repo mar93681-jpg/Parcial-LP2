@@ -15,7 +15,7 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     background-color: #f4f4f4;
-    overflow: hidden; /* evita scroll */
+    overflow: hidden;
 }
 
 /* === ENCABEZADO === */
@@ -42,13 +42,12 @@ main {
 section {
     min-width: 100%;
     height: 100vh;
-    padding: 4rem 2rem 2rem; /* espacio para el header */
+    padding: 6rem 2rem 2rem;
     background: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid #ddd;
 }
 
 section:nth-child(even) {
@@ -64,6 +63,28 @@ p {
     max-width: 800px;
     text-align: center;
     font-size: 1.2rem;
+}
+
+/* === BLOQUE DE CÓDIGO CON SCROLL === */
+.codigo-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #f8f8f8;
+}
+
+.codigo-scroll {
+    max-height: 400px;
+    width: 80%;
+    overflow-y: auto;
+    background: #1e1e1e;
+    color: #f8f8f2;
+    padding: 1em;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+    text-align: left;
 }
 
 /* === NAVEGACIÓN === */
@@ -110,35 +131,30 @@ footer {
 </header>
 
 <main id="slides">
+
     <section>
         <table>
             <tr>
-                <td class="logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Unalm_logo.png" width="130" alt="Logo UNALM">
-                </td>
-                <td class="texto">
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Unalm_logo.png" width="130" alt="Logo UNALM"></td>
+                <td style="padding-left:15px;">
                     <strong>Universidad Nacional Agraria La Molina</strong><br><br>
                     Facultad de Economía y Planificación<br><br>
                     Departamento de Estadística e Informática
                 </td>
             </tr>
         </table>
+
         <h2>Integrantes</h2>
-        
         <div class="team-members">
             <div class="member">Malvacedo Quiñonez, Jean Franco</div>
             <div class="member">Cruz Cruz, Hilary Penelope</div>
-            <div class="member">Maria Fernanda, Chávez Mendoza</div>
-            <div class="member">Mejia Auccapoma, Piero Cesar</div>
+            <div class="member">Chávez Mendoza, María Fernanda</div>
+            <div class="member">Mejía Auccapoma, Piero César</div>
         </div>
-        
+
         <br><br>
-        
         <h2>Docente</h2>
-            <div class="profesora">
-                Ana Cecilia Vargas Paredes
-            </div>
-        
+        <div class="profesora">Ana Cecilia Vargas Paredes</div>
     </section>
     
     <section>
@@ -175,80 +191,63 @@ footer {
 
         
     </section>
+    </section>
 
     <section class="codigo-slide">
-      <h2>Estadística básica</h2>
-    
-      <div class="codigo-pequeno">
-        <pre><code class="python">
-    from abc import ABC, abstractmethod
-    
-    class EstadisticaBase(ABC):
-        def __init__(self, datos):
-            # Validar que los datos sean una lista o tupla numérica
-            if not isinstance(datos, (list, tuple)):
-                raise TypeError("Los datos deben estar en una lista o tupla.")
-            if not all(isinstance(x, (int, float)) for x in datos):
-                raise ValueError("Todos los elementos deben ser números.")
-            self.datos = datos
-    
-        @abstractmethod
-        def promedio(self): pass
-        @abstractmethod
-        def minimo(self): pass
-        @abstractmethod
-        def maximo(self): pass
-        @abstractmethod
-        def resumen(self): pass
-    
-        def cantidad_datos(self):
-            return len(self.datos)
-    
-        def tipo_datos(self):
-            return self.__class__.__name__
-    
-    class EstadCB(EstadisticaBase):
-    
-        def promedio(self):
-            return sum(self.datos) / len(self.datos) if self.datos else 0
-    
-        def minimo(self):
-            return min(self.datos)
-    
-        def maximo(self):
-            return max(self.datos)
-    
-        def resumen(self):
-            print("----- RESUMEN DE DATOS -----")
-            print(f"Tipo de clase: {self.tipo_datos()}")
-            print(f"Cantidad de datos: {self.cantidad_datos()}")
-            print(f"Valor mínimo: {self.minimo()}")
-            print(f"Valor máximo: {self.maximo()}")
-            print(f"Promedio: {self.promedio():.2f}")
-            print("----------------------------")
-        </code></pre>
-      </div>
-    </section>
+        <br></br>
+        <h2>Estadística básica</h2>
+        <div class="codigo-scroll">
+<pre><code>
+from abc import ABC, abstractmethod
 
+class EstadisticaBase(ABC):
+    def __init__(self, datos):
+        if not isinstance(datos, (list, tuple)):
+            raise TypeError("Los datos deben estar en una lista o tupla.")
+        if not all(isinstance(x, (int, float)) for x in datos):
+            raise ValueError("Todos los elementos deben ser números.")
+        self.datos = datos
 
+    @abstractmethod
+    def promedio(self): pass
+    @abstractmethod
+    def minimo(self): pass
+    @abstractmethod
+    def maximo(self): pass
+    @abstractmethod
+    def resumen(self): pass
 
-    <section>
-        <h2>Metodología</h2>
-        <p>Diseñamos el CSS para dividir el contenido en pantallas completas, controladas por teclado o botones.</p>
-    </section>
+    def cantidad_datos(self):
+        return len(self.datos)
 
-    <section>
-        <h2>Equipo</h2>
-        <div class="team-members">
-            <div class="member">Piero</div>
-            <div class="member">Integrante 2</div>
-            <div class="member">Integrante 3</div>
+    def tipo_datos(self):
+        return self.__class__.__name__
+
+class EstadCB(EstadisticaBase):
+    def promedio(self):
+        return sum(self.datos) / len(self.datos) if self.datos else 0
+
+    def minimo(self):
+        return min(self.datos)
+
+    def maximo(self):
+        return max(self.datos)
+
+    def resumen(self):
+        print("----- RESUMEN DE DATOS -----")
+        print(f"Tipo de clase: {self.tipo_datos()}")
+        print(f"Cantidad de datos: {self.cantidad_datos()}")
+        print(f"Valor mínimo: {self.minimo()}")
+        print(f"Valor máximo: {self.maximo()}")
+        print(f"Promedio: {self.promedio():.2f}")
+        print("----------------------------")
+</code></pre>
         </div>
     </section>
 
     <section>
         <h2>Conclusiones</h2>
-        <p>Este formato es ideal para presentaciones interactivas en línea, sin depender de PowerPoint.</p>
+        <p>Este formato con scroll permite mostrar código largo sin afectar la presentación.</p>
     </section>
 </main>
 
