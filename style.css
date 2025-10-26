@@ -65,11 +65,16 @@ h2 {
 }
 
 pre {
-    background: #f8f8f8;
+    background-color: #282c34;
+    color: #f8f8f2;
     padding: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    width: 80%;
 }
+
 
 code {
     font-family: 'Courier New', monospace;
