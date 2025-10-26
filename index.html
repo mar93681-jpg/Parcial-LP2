@@ -42,7 +42,7 @@ main {
 section {
     min-width: 100%;
     height: 100vh;
-    padding: 6rem 2rem 2rem; /* espacio para el header */
+    padding: 4rem 2rem 2rem; /* espacio para el header */
     background: white;
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@ footer {
         <table>
             <tr>
                 <td class="logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Unalm_logo.png" width="230" alt="Logo UNALM">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Unalm_logo.png" width="130" alt="Logo UNALM">
                 </td>
                 <td class="texto">
                     <strong>Universidad Nacional Agraria La Molina</strong><br><br>
@@ -131,7 +131,9 @@ footer {
             <div class="member">Maria Fernanda, Chávez Mendoza</div>
             <div class="member">Mejia Auccapoma, Piero Cesar</div>
         </div>
-
+        
+        <br><br>
+        
         <h2>Docente</h2>
             <div class="profesora">
                 Ana Cecilia Vargas Paredes
@@ -155,7 +157,7 @@ footer {
                 la práctica del análisis estadístico, fortaleciendo las competencias en programación y 
                 análisis de datos.
             </p>
-
+        <br><br>
         <h2>Objetivos</h2>
             <h3>Objetivo general</h3>
                 <p>
@@ -174,10 +176,61 @@ footer {
         
     </section>
 
-    <section>
-        <h2>Objetivos</h2>
-        <p>Mostrar cómo un estilo web puede adaptarse a un formato tipo PowerPoint para GitHub Pages.</p>
+    <section class="codigo-slide">
+      <h2>Estadística básica</h2>
+    
+      <div class="codigo-pequeno">
+        <pre><code class="python">
+    from abc import ABC, abstractmethod
+    
+    class EstadisticaBase(ABC):
+        def __init__(self, datos):
+            # Validar que los datos sean una lista o tupla numérica
+            if not isinstance(datos, (list, tuple)):
+                raise TypeError("Los datos deben estar en una lista o tupla.")
+            if not all(isinstance(x, (int, float)) for x in datos):
+                raise ValueError("Todos los elementos deben ser números.")
+            self.datos = datos
+    
+        @abstractmethod
+        def promedio(self): pass
+        @abstractmethod
+        def minimo(self): pass
+        @abstractmethod
+        def maximo(self): pass
+        @abstractmethod
+        def resumen(self): pass
+    
+        def cantidad_datos(self):
+            return len(self.datos)
+    
+        def tipo_datos(self):
+            return self.__class__.__name__
+    
+    class EstadCB(EstadisticaBase):
+    
+        def promedio(self):
+            return sum(self.datos) / len(self.datos) if self.datos else 0
+    
+        def minimo(self):
+            return min(self.datos)
+    
+        def maximo(self):
+            return max(self.datos)
+    
+        def resumen(self):
+            print("----- RESUMEN DE DATOS -----")
+            print(f"Tipo de clase: {self.tipo_datos()}")
+            print(f"Cantidad de datos: {self.cantidad_datos()}")
+            print(f"Valor mínimo: {self.minimo()}")
+            print(f"Valor máximo: {self.maximo()}")
+            print(f"Promedio: {self.promedio():.2f}")
+            print("----------------------------")
+        </code></pre>
+      </div>
     </section>
+
+
 
     <section>
         <h2>Metodología</h2>
