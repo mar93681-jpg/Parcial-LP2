@@ -1,94 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Librería de Estadísticas POO</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presentación tipo PowerPoint</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow: hidden; /* evita scroll */
+}
+
+/* === ENCABEZADO === */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+main {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    height: 100vh;
+    width: 100%;
+}
+
+/* === CADA SLIDE === */
+section {
+    min-width: 100%;
+    height: 100vh;
+    padding: 6rem 2rem 2rem; /* espacio para el header */
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ddd;
+}
+
+section:nth-child(even) {
+    background: #f8f8f8;
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+p {
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* === NAVEGACIÓN === */
+.nav-buttons {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 20;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #764ba2;
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1> Librería de Estadísticas con POO</h1>
-        <p>Una librería Python para análisis estadísticos usando Programación Orientada a Objetos</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#instalacion">Instalación</a></li>
-            <li><a href="#uso">Uso</a></li>
-            <li><a href="#ejemplos">Ejemplos</a></li>
-            <li><a href="#documentacion">Documentación</a></li>
-            <li><a href="#equipo">Equipo</a></li>
-        </ul>
-    </nav>
+<header>
+    <h1>Mi Presentación</h1>
+</header>
 
-    <main>
-        <section id="instalacion">
-            <h2> Instalación</h2>
-            <pre><code>pip install estadisticas-poo</code></pre>
-        </section>
+<main id="slides">
+    <section>
+        <h2>Introducción</h2>
+        <p>Bienvenidos a nuestra presentación. Aquí exploraremos los principales temas del proyecto.</p>
+    </section>
 
-        <section id="uso">
-            <h2> Uso Básico</h2>
-            <pre><code>from estadisticas_poo import EstadisticasCuantitativas, EstadisticasCualitativas
+    <section>
+        <h2>Objetivos</h2>
+        <p>Mostrar cómo un estilo web puede adaptarse a un formato tipo PowerPoint para GitHub Pages.</p>
+    </section>
 
-# Para datos numéricos
-datos_numericos = [1, 2, 3, 4, 5, 5, 6]
-estadisticas = EstadisticasCuantitativas(datos_numericos)
-print(estadisticas.media())</code></pre>
-        </section>
+    <section>
+        <h2>Metodología</h2>
+        <p>Diseñamos el CSS para dividir el contenido en pantallas completas, controladas por teclado o botones.</p>
+    </section>
 
-        <section id="ejemplos">
-            <h2>📈 Ejemplos</h2>
-            <div class="example">
-                <h3>Análisis Cuantitativo</h3>
-                <pre><code># Calcular todas las estadísticas
-resultados = estadisticas.resumen_completo()</code></pre>
-            </div>
-            <div class="example">
-                <h3>Análisis Cualitativo</h3>
-                <pre><code>datos_categoricos = ['A', 'B', 'A', 'C', 'B']
-cualitativas = EstadisticasCualitativas(datos_categoricos)
-tabla_frecuencias = cualitativas.tabla_frecuencias()</code></pre>
-            </div>
-        </section>
+    <section>
+        <h2>Equipo</h2>
+        <div class="team-members">
+            <div class="member">Piero</div>
+            <div class="member">Integrante 2</div>
+            <div class="member">Integrante 3</div>
+        </div>
+    </section>
 
-        <section id="documentacion">
-            <h2>Documentación</h2>
-            <p>Documentación completa de todas las clases y métodos disponibles.</p>
-            <a href="docs/documentacion.pdf" download>Descargar Documentación PDF</a>
-        </section>
+    <section>
+        <h2>Conclusiones</h2>
+        <p>Este formato es ideal para presentaciones interactivas en línea, sin depender de PowerPoint.</p>
+    </section>
+</main>
 
-        <section id="equipo">
-            <h2> Equipo de Desarrollo</h2>
-            <div class="team-members">
-                <!-- Aquí lista los miembros del grupo -->
-                 <div class="member">
-                    <h4>Jean</h4>
-                    <p>Responsable: Clase Base y estructura POO</p>
-                </div>
-                 <div class="member">
-                    <h4>María</h4>
-                    <p>Responsable: Estadísticas cualitativas POO</p>
-                </div>
-                 <div class="member">
-                    <h4>Hilary</h4>
-                    <p>Responsable:Estadísticas cuantitativas POO</p>
-                </div>
-                 <div class="member">
-                    <h4>Piero</h4>
-                    <p>Responsable: Integración, polimorfismo y pruebas POO</p>
-                </div>
-            </div>
-        </section>
-    </main>
+<div class="nav-buttons">
+    <button id="prev">← Anterior</button>
+    <button id="next">Siguiente →</button>
+</div>
 
-    <footer>
-        <p>&copy; 2024 Equipo de Estadísticas POO. Todos los derechos reservados.</p>
-        <p><a href="https://github.com/tu-usuario/tu-repositorio">Ver en GitHub</a></p>
-    </footer>
+<footer>
+    <p>© 2025 Mi Presentación - Inspirada en GitHub Pages</p>
+</footer>
 
-    <script src="script.js"></script>
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('section');
+const totalSlides = slides.length;
+const main = document.getElementById('slides');
+
+function showSlide(index) {
+    if (index < 0) index = 0;
+    if (index >= totalSlides) index = totalSlides - 1;
+    currentSlide = index;
+    main.style.transform = 'translateX(' + (-index * 100) + 'vw)';
+}
+
+document.getElementById('next').addEventListener('click', () => showSlide(currentSlide + 1));
+document.getElementById('prev').addEventListener('click', () => showSlide(currentSlide - 1));
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') showSlide(currentSlide + 1);
+    if (e.key === 'ArrowLeft') showSlide(currentSlide - 1);
+});
+</script>
+
 </body>
 </html>
-
