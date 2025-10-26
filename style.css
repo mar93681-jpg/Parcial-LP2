@@ -101,3 +101,16 @@ footer a {
     color: #667eea;
     text-decoration: none;
 }
+table {
+    border-collapse: separate; 
+    border-spacing: 20px 0; 
+}
+
+td {
+    vertical-align: middle; 
+}
+
+td.texto {
+    padding-left: 15px; 
+    line-height: 1.6; 
+}
