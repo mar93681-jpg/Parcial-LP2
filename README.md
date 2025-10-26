@@ -66,7 +66,8 @@ El proyecto está dividido en tres módulos:
 4. [Estadística Cuantitativa (estadistica_cuantitativa.py)](libreria/estadisticas_poo/estadistica_cuantitativa.py)
 5. [Módulo Principal (main.py)](libreria/estadisticas_poo/main.py)
 6. [Simulador de Datos (simular_datos.py)](libreria/simular_datos.py)
-   6.1. [Datos Simulados (datos_simulados.csv)](Data/datos_simulados.csv)
+7. [Datos Simulados (datos_simulados.csv)](Data/datos_simulados.csv)
+8. 
 
 ```text
 📦 Proyecto_Estadistico/
