@@ -114,8 +114,39 @@ table {
 td {
     vertical-align: middle; 
 }
+section pre {
+    background-color: #282c34;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    width: 80%;          
+    max-height: 400px;   
+    overflow-y: auto;    
+    text-align: left;
+}
+
 
 td.texto {
     padding-left: 15px; 
     line-height: 1.6; 
+}
+.codigo-slide {
+    align-items: flex-start;
+    padding-left: 6%;
+    text-align: left;
+}
+
+.codigo-slide .codigo-pequeno {
+    width: 75%;
+    max-height: 380px;
+    overflow-y: auto;
+    background-color: #282c34;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
 }
