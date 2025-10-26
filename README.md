@@ -26,7 +26,7 @@
 3. [Estadística Cualitativa (estadistica_cualitativa.py)](libreria/estadisticas_poo/estadistica_cualitativa.py)
 4. [Estadística Cuantitativa (estadistica_cuantitativa.py)](libreria/estadisticas_poo/estadistica_cuantitativa.py)
 5. [Módulo Principal (main.py)](libreria/estadisticas_poo/main.py)
-6. [Simulador de Datos (simular_datos.py)](libreria/estadisticas_poo/simular_datos.py)
+6. [Simulador de Datos (simular_datos.py)](Data/datos_simulados.csv)
    
 ## Evaluación grupal 1 (25%)
 Indicaciones
