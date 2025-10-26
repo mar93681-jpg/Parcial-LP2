@@ -200,8 +200,7 @@ footer {
             La clase <strong>EstadisticaBase</strong> es una clase abstracta que sirve como base para otras clases de estadísticas. Recibe un conjunto de datos (lista o tupla de números) y realiza validaciones para asegurarse de que los datos sean válidos. Define cuatro métodos abstractos (<strong>promedio</strong>, <strong>minimo</strong>, <strong>maximo</strong>, <strong>resumen</strong>) que deben ser implementados por las clases hijas, mientras que también proporciona métodos concretos como <strong>cantidad_datos</strong>, que devuelve el número de elementos, y <strong>tipo_datos</strong>, que devuelve el nombre de la clase. Esto permite crear diversas implementaciones específicas de estadísticas, asegurando consistencia en la estructura.
         </p>
         <div class="codigo-scroll">
-<pre><code>
-from abc import ABC, abstractmethod
+<pre><code>from abc import ABC, abstractmethod
 
 class EstadisticaBase(ABC):
     def __init__(self, datos):
