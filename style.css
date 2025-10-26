@@ -122,7 +122,7 @@ section pre {
     overflow-x: auto;
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
-    width: 80%;          
+    width: 400px;          
     max-height: 400px;   
     overflow-y: auto;    
     text-align: left;
@@ -138,19 +138,23 @@ td.texto {
 .codigo-slide {
     display: flex;
     flex-direction: column;
-    align-items: center;  /* centramos el contenido */
-    justify-content: flex-start; /* empezamos desde arriba */
-    padding-top: 6rem;  /* deja espacio para el header fijo */
+    align-items: center;  
+    justify-content: flex-start; 
+    padding-top: 6rem;  
     background: #f8f8f8;
 }
 
 .codigo-scroll {
     max-height: 400px;
+    width: 400px !important;   /* fuerza el ancho fijo */
     overflow-y: auto;
     background: #1e1e1e;
     color: #f8f8f2;
     padding: 1em;
     border-radius: 8px;
-    font-family: monospace;
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+    text-align: left;
+    margin: 0 auto;            /* centra el bloque */
+    box-shadow: 0 0 15px rgba(0,0,0,0.25); /* (opcional) efecto visual */
 }
-
