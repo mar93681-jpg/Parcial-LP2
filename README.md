@@ -1,4 +1,4 @@
-# Parcial-LP2
+# Parcial-Lenguaje de Programación II
 <table>
   <tr>
     <td style="padding-right: 20px;">
@@ -11,8 +11,6 @@
     </td>
   </tr>
 </table>
-
-# Lenguaje de Programación II
 
 **Docente:** Ana Cecilia Vargas Paredes  
 📧 *anavargas@lamolina.edu.pe*  
@@ -58,24 +56,21 @@
 
 El proyecto está dividido en tres módulos:
 
+```text
+📦 Proyecto_Estadistico/
+ ┣ 📜 estadistica_cualitativa.py
+ ┣ 📜 estadistica_cuantitativa.py
+ ┣ 📜 simular_datos.py
+ ┣ 📜 datos_simulados.csv
+ ┗ 📜 main.py
+```
 ## Tabla de Contenidos (Archivos del Repositorio)
 
 1. [Base de Estadísticas (EstadisticaBase.py)](libreria/estadisticas_poo/EstadisticaBase.py)
 2. [Inicializador (__init__.py)](libreria/estadisticas_poo/__init__.py)
 3. [Estadística Cualitativa (estadistica_cualitativa.py)](libreria/estadisticas_poo/estadistica_cualitativa.py)
 4. [Estadística Cuantitativa (estadistica_cuantitativa.py)](libreria/estadisticas_poo/estadistica_cuantitativa.py)
-5. [Módulo Principal (main.py)](libreria/estadisticas_poo/main.py)
 6. [Simulador de Datos (simular_datos.py)](libreria/simular_datos.py)
 7. [Datos Simulados (datos_simulados.csv)](Data/datos_simulados.csv)
-8. 
-
-```text
-📦 Proyecto_Estadistico/
- ┣ 📜 estadistica_cuantitativa.py
- ┣ 📜 estadistica_cualitativa.py
- ┣ 📜 simular_datos.py
- ┣ 📜 datos_simulados.csv
- ┗ 📜 main.py
-
-   
-
+8. [Integración, Polimorfismo y Pruebas (main.py)](libreria/estadisticas_poo/main.py)
+9. [Módulo Principal (main.ipynb)](notebooks/main.ipynb)
