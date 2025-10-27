@@ -532,16 +532,262 @@ if __name__ == '__main__':
         <h2>Carga de datos</h2>
         <div class="codigo-scroll">
 <pre><code>import pandas as pd
-
 # Cargar el dataset
 df = pd.read_csv('datos_simulados.csv')
-df.head()</code></pre>
+df.head() </code></pre>
         </div>
-        <img src="https://github.com/mar93681-jpg/Parcial-LP2/blob/main/Data/head.PNG?raw=true" alt="Descripción de la imagen" width="1000">
+        <img src="https://github.com/mar93681-jpg/Parcial-LP2/blob/main/Data/head.PNG?raw=true" alt="Descripción de la imagen" width="1100">
     </section>
 
+    <section class="codigo-slide">
+        <br></br>
+        <h2>Codigo a probar</h2>
+        <div class="codigo-scroll">
+<pre><code>import csv
+from estadistica_cuantitativa import EstadisticaCuantitativa
+from estadistica_cualitativa import EstadisticaCualitativa
 
-    
+def cargar_datos(archivo='datos_simulados.csv'):
+    """Carga los datos desde un archivo CSV y devuelve una lista de diccionarios."""
+    with open(archivo, 'r', encoding='utf-8') as f:
+        lector = csv.DictReader(f)
+        datos = [fila for fila in lector]
+    return datos
+
+def mostrar_resumen(objeto_estadistico):
+    """Muestra el resumen, sin importar el tipo de estadística."""
+    print(f'\n Resumen ({objeto_estadistico.tipo_datos()})')
+    objeto_estadistico.resumen()
+
+def main():
+    datos = cargar_datos()
+
+    # Variables cuantitativas
+    edades = [int(f['Edad']) for f in datos]
+    ingresos = [float(f['Ingreso_mensual_miles']) for f in datos]
+    horas = [float(f['Horas_trabajadas_por_semana']) for f in datos]
+    gastos = [float(f['Gasto_mensual_miles']) for f in datos]
+
+    # Variables cualitativas
+    colores = [f['Color_favorito'] for f in datos]
+    ocupaciones = [f['Ocupacion'] for f in datos]
+    generos = [f['Genero'] for f in datos]
+    estados = [f['Estado_civil'] for f in datos]
+
+    # Crear objetos de análisis
+    estad_edad = EstadisticaCuantitativa(edades)
+    estad_ingreso = EstadisticaCuantitativa(ingresos)
+    estad_horas = EstadisticaCuantitativa(horas)
+    estad_gasto = EstadisticaCuantitativa(gastos)
+
+    estad_color = EstadisticaCualitativa(colores)
+    estad_ocupacion = EstadisticaCualitativa(ocupaciones)
+    estad_genero = EstadisticaCualitativa(generos)
+    estad_estado = EstadisticaCualitativa(estados)
+
+    # Mostrar resultados (polimorfismo)
+    mostrar_resumen(estad_edad)
+    mostrar_resumen(estad_ingreso)
+    mostrar_resumen(estad_horas)
+    mostrar_resumen(estad_gasto)
+
+    mostrar_resumen(estad_color)
+    mostrar_resumen(estad_ocupacion)
+    mostrar_resumen(estad_genero)
+    mostrar_resumen(estad_estado)
+
+if __name__ == '__main__':
+    main() </code></pre>
+        </div>
+    </section>
+
+    <section class="codigo-slide">
+        <br></br>
+        <h2>Resultado</h2>
+        <div class="codigo-scroll">
+<pre><code>CLASE CUANTITATIVA
+
+Probando la clase:
+Creado exitosamente uu
+==================================================
+     RESUMEN ESTADÍSTICAS CUANTITATIVAS
+==================================================
+Cantidad: 13
+Mínimo: 12.00
+Máximo: 90.00
+Rango: 78.00
+
+--- TENDENCIA CENTRAL ---
+Media: 51.85
+Mediana: 45.00
+Moda: [45]
+
+--- DISPERSIÓN ---
+Varianza: 592.90
+Desviación: 24.35
+Coef. variación: 46.96%
+
+--- CUARTILES ---
+Q1: 34.00, Q2: 45.00, Q3: 67.00
+IQR: 33.00
+==================================================
+----- RESUMEN DE DATOS -----
+Cantidad de datos: 5
+Valor mínimo: 10
+Valor máximo: 50
+Promedio: 30.00
+----------------------------
+
+ Resumen (EstadisticaCuantitativa)
+==================================================
+     RESUMEN ESTADÍSTICAS CUANTITATIVAS
+==================================================
+Cantidad: 200
+Mínimo: 18.00
+Máximo: 65.00
+Rango: 47.00
+
+--- TENDENCIA CENTRAL ---
+Media: 40.28
+Mediana: 38.00
+Moda: [20]
+
+--- DISPERSIÓN ---
+Varianza: 190.79
+Desviación: 13.81
+Coef. variación: 34.29%
+
+--- CUARTILES ---
+Q1: 28.00, Q2: 38.00, Q3: 52.00
+IQR: 24.00
+==================================================
+
+ Resumen (EstadisticaCuantitativa)
+==================================================
+     RESUMEN ESTADÍSTICAS CUANTITATIVAS
+==================================================
+Cantidad: 200
+Mínimo: 1.55
+Máximo: 9.93
+Rango: 8.38
+
+--- TENDENCIA CENTRAL ---
+Media: 5.60
+Mediana: 5.56
+Moda: [2.57]
+
+--- DISPERSIÓN ---
+Varianza: 5.17
+Desviación: 2.27
+Coef. variación: 40.60%
+
+--- CUARTILES ---
+Q1: 3.77, Q2: 5.56, Q3: 7.35
+IQR: 3.58
+==================================================
+
+ Resumen (EstadisticaCuantitativa)
+==================================================
+     RESUMEN ESTADÍSTICAS CUANTITATIVAS
+==================================================
+Cantidad: 200
+Mínimo: 20.00
+Máximo: 60.00
+Rango: 40.00
+
+--- TENDENCIA CENTRAL ---
+Media: 40.65
+Mediana: 40.00
+Moda: [60.0]
+
+--- DISPERSIÓN ---
+Varianza: 139.98
+Desviación: 11.83
+Coef. variación: 29.11%
+
+--- CUARTILES ---
+Q1: 31.00, Q2: 40.00, Q3: 51.00
+IQR: 20.00
+==================================================
+
+ Resumen (EstadisticaCuantitativa)
+==================================================
+     RESUMEN ESTADÍSTICAS CUANTITATIVAS
+==================================================
+Cantidad: 200
+Mínimo: 1.27
+Máximo: 9.66
+Rango: 8.39
+
+--- TENDENCIA CENTRAL ---
+Media: 5.07
+Mediana: 5.05
+Moda: [1.85, 5.27, 4.86]
+
+--- DISPERSIÓN ---
+Varianza: 4.37
+Desviación: 2.09
+Coef. variación: 41.23%
+
+--- CUARTILES ---
+Q1: 3.37, Q2: 5.05, Q3: 6.65
+IQR: 3.29
+==================================================
+
+ Resumen (EstadisticaCualitativa)
+----- RESUMEN DE DATOS (CUALITATIVOS) -----
+Cantidad de datos: 200
+Moda(s): morado
+
+--- Tabla de Frecuencias ---
+  - morado: 36
+  - rojo: 33
+  - verde: 29
+  - azul: 28
+  - blanco: 27
+  - negro: 24
+  - amarillo: 23
+-----------------------------------------------------
+
+ Resumen (EstadisticaCualitativa)
+----- RESUMEN DE DATOS (CUALITATIVOS) -----
+Cantidad de datos: 200
+Moda(s): ingeniero
+
+--- Tabla de Frecuencias ---
+  - ingeniero: 40
+  - vendedor: 35
+  - estudiante: 34
+  - programador: 32
+  - docente: 31
+  - médico: 28
+-----------------------------------------------------
+
+ Resumen (EstadisticaCualitativa)
+----- RESUMEN DE DATOS (CUALITATIVOS) -----
+Cantidad de datos: 200
+Moda(s): femenino
+
+--- Tabla de Frecuencias ---
+  - femenino: 78
+  - masculino: 66
+  - otro: 56
+-----------------------------------------------------
+
+ Resumen (EstadisticaCualitativa)
+----- RESUMEN DE DATOS (CUALITATIVOS) -----
+Cantidad de datos: 200
+Moda(s): casado, soltero
+
+--- Tabla de Frecuencias ---
+  - casado: 57
+  - soltero: 57
+  - viudo: 44
+  - divorciado: 42
+----------------------------------------------------- </code></pre>
+        </div>
+    </section>
+
     <section>
         <h2>Conclusiones</h2>
         <p>Este formato con scroll permite mostrar código largo sin afectar la presentación.</p>
