@@ -114,3 +114,14 @@ classDiagram
     Main ..> EstadisticaCuantitativa : utiliza
     Main ..> EstadisticaCualitativa : utiliza
 
+<br>
+<br>
+<br>
+
+<!-- ========== DIAGRAMA DE ARQUITECTURA - NO MODIFICAR CONTENIDO ANTERIOR ========== -->
+
+## 🏗️ Diagrama de Arquitectura del Sistema
+
+<img src="https://raw.githubusercontent.com/mar93681-jpg/Parcial-LP2/refs/heads/main/arquitectura.svg" alt="Diagrama de Arquitectura" width="100%">
+
+*Estructura técnica real de la librería estadística POO - Basado en el código implementado*
