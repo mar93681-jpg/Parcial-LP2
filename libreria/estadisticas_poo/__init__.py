@@ -2,7 +2,10 @@
 Librería de Estadísticas - POO
 Autores: Hilary Cruz, Maria Chavez, Jean Malvacedo, Piero Mejia
 """
-
+"""
+Este archivo convierte la carpeta en un PAQUETE Python.
+Hace que: 'from estadisticas_poo import EstadisticaCuantitativa' funcione
+"""
 # Importar todas las clases para que estén disponibles directamente
 from .EstadisticaBase import EstadisticaBase
 from .estadistica_cuantitativa import EstadisticaCuantitativa
