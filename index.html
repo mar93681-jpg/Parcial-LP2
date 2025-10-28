@@ -256,65 +256,253 @@ class EstadisticaBase(ABC):
         </div>
     </section>
 
-    <section class="codigo-slide">
-        <h2>Implementación POO - Estadísticas Cuantitativas</h2>
-    
-    <div class="concept-box">
-        <h3>Herencia Aplicada</h3>
-        <pre><code class="python">
+    <!-- === SLIDE 1: HERENCIA DETALLADA === -->
+<section class="codigo-slide">
+    <br></br>
+    <h2>Herencia en Estadísticas Cuantitativas</h2>
+    <p>
+        La clase <strong>EstadisticaCuantitativa</strong> implementa <strong>herencia</strong> al extender 
+        <strong>EstadisticaBase</strong>, heredando su estructura fundamental mientras especializa el comportamiento 
+        para datos numéricos. Esta relación padre-hija garantiza consistencia en la interfaz mientras permite 
+        implementaciones específicas para cada tipo de dato.
+    </p>
+    <div class="codigo-scroll">
+<pre><code>from EstadisticaBase import EstadisticaBase
+import math
+
 class EstadisticaCuantitativa(EstadisticaBase):
-    # Hereda: __init__, cantidad_datos(), tipo_datos()
-    # Implementa: promedio(), minimo(), maximo(), resumen()
-        </code></pre>
-        <p><strong>Explicación:</strong> Mi clase especializa el comportamiento para datos numéricos, manteniendo la interfaz común definida por la clase base.</p>
-    </div>
+    def __init__(self, datos):
+        # HEREDA la validación básica de EstadisticaBase
+        super().__init__(datos)  
+        
+        # VALIDACIÓN ESPECÍFICA para datos numéricos
+        for dato in datos:
+            if not isinstance(dato, (int, float)):
+                raise TypeError(f"❌ Dato no numérico detectado: {type(dato)}")
+        
+        self.datos = list(datos)
+        self._datos_ordenados = None  # ← CACHE para optimización
 
-    <div class="concept-box">
-        <h3>Polimorfismo en 3 Niveles</h3>
-        <pre><code class="python">
-# 1. SOBRESCRITURA:
+    # === MÉTODOS HEREDADOS QUE DEBEN IMPLEMENTARSE ===
+    def promedio(self): 
+        return self.media()  # ← Especialización para números
+    
+    def minimo(self): 
+        return min(self.datos) if self.datos else None
+    
+    def maximo(self): 
+        return max(self.datos) if self.datos else None
+    
+    def resumen(self):
+        # Implementación específica para datos cuantitativos
+        self._mostrar_resumen_completo()</code></pre>
+    </div>
+    <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+        <strong>💡 Punto Clave:</strong> La herencia me obliga a implementar los 4 métodos abstractos, 
+        pero me da libertad para especializar cada implementación según el tipo de dato.
+    </div>
+</section>
+
+<!-- === SLIDE 2: POLIMORFISMO DETALLADO === -->
+<section class="codigo-slide">
+    <br></br>
+    <h2>Polimorfismo en 3 Dimensiones</h2>
+    <p>
+        El <strong>polimorfismo</strong> permite que el mismo método o función se comporte de manera diferente 
+        según el tipo de objeto. En nuestro proyecto, implementé polimorfismo en tres niveles distintos, 
+        demostrando la flexibilidad de la POO.
+    </p>
+    <div class="codigo-scroll">
+<pre><code># === 1. POLIMORFISMO POR SOBRESCRITURA ===
+# En EstadisticaCuantitativa:
 def promedio(self): 
-    return self.media()  # vs. return None en cualitativa
+    return self.media()  # ← Para números: cálculo matemático
 
-# 2. FUNCIÓN POLIMÓRFICA:
-def mostrar_resumen(objeto):
-    objeto.resumen()  # ← Comportamiento diferente según el tipo
+# En EstadisticaCualitativa:
+def promedio(self): 
+    return None  # ← Para texto: no aplica
 
-# 3. MÉTODOS ABSTRACTOS:
+# === 2. POLIMORFISMO EN FUNCIONES ===
+def mostrar_resumen(objeto_estadistico):
+    """Función que acepta CUALQUIER tipo de estadística"""
+    print(f'\n📊 Resumen ({objeto_estadistico.tipo_datos()})')
+    objeto_estadistico.resumen()  # ← Comportamiento DIFERENTE según el tipo
+
+# USO POLIMÓRFICO:
+mostrar_resumen(EstadisticaCuantitativa([1, 2, 3]))  # ← Muestra análisis numérico
+mostrar_resumen(EstadisticaCualitativa(["A", "B"]))  # ← Muestra análisis categórico
+
+# === 3. POLIMORFISMO CON MÉTODOS ABSTRACTOS ===
 @abstractmethod
-def resumen(self): pass  # Implementación específica en cada clase
-        </code></pre>
+def resumen(self): pass  
+# Cada clase implementa su VERSIÓN específica</code></pre>
     </div>
-
-    <div class="concept-box">
-        <h3>Algoritmos Estadísticos Implementados</h3>
-        <ul>
-            <li><strong>Media:</strong> Σxᵢ / n</li>
-            <li><strong>Mediana:</strong> Algoritmo de búsqueda en datos ordenados</li>
-            <li><strong>Varianza:</strong> Σ(xᵢ - μ)² / N con corrección de Bessel</li>
-            <li><strong>Percentiles:</strong> Interpolación lineal entre posiciones</li>
-            <li><strong>Moda:</strong> Conteo de frecuencias con diccionarios</li>
-        </ul>
+    <div style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+        <strong>Demostración Práctica:</strong> La misma función <code>mostrar_resumen()</code> produce 
+        salidas completamente diferentes para datos cuantitativos vs cualitativos, gracias al polimorfismo.
     </div>
+</section>
 
-    <div class="concept-box">
-        <h3>Comandos Git Utilizados</h3>
-        <pre><code class="bash">
-# Configuración inicial
+<!-- === SLIDE 3: ALGORITMOS ESTADÍSTICOS DETALLADOS === -->
+<section class="codigo-slide">
+    <br></br>
+    <h2>Algoritmos Estadísticos Implementados</h2>
+    <p>
+        Se impplementaron manualmente 8 algoritmos estadísticos fundamentales, cada uno con su fórmula matemática 
+        y lógica de programación específica. Todos incluyen validaciones robustas y manejo de casos edge.
+    </p>
+    <div class="codigo-scroll">
+<pre><code># === MEDIA ARITMÉTICA ===
+def media(self):
+    """Calcula el promedio: Σxᵢ / n"""
+    if not self.datos: 
+        return None  # ← Manejo de lista vacía
+    return sum(self.datos) / len(self.datos)
+
+# === MEDIANA - Algoritmo de búsqueda ===
+def mediana(self):
+    """Encuentra el valor central en datos ordenados"""
+    datos_ordenados = self._ordenar_datos()
+    n = len(datos_ordenados)
+    
+    if n % 2 == 1: 
+        return datos_ordenados[n // 2]          # Caso impar: posición central
+    else: 
+        # Caso par: promedio de los dos centrales
+        return (datos_ordenados[n // 2 - 1] + datos_ordenados[n // 2]) / 2
+
+# === VARIANZA con corrección de Bessel ===
+def varianza(self, poblacional=True):
+    """Σ(xᵢ - μ)² / N (población) o / (N-1) (muestra)"""
+    if len(self.datos) < 2: 
+        return None  # ← No se puede calcular con menos de 2 datos
+    
+    media_val = self.media()
+    n = len(self.datos)
+    divisor = n if poblacional else n - 1  # ← Corrección para muestras
+    
+    suma_cuadrados = sum((x - media_val) ** 2 for x in self.datos)
+    return suma_cuadrados / divisor
+
+# === PERCENTILES por interpolación lineal ===
+def percentil(self, percentil):
+    """Calcula percentiles usando interpolación entre posiciones"""
+    datos_ordenados = self._ordenar_datos()
+    n = len(datos_ordenados)
+    
+    # Fórmula de interpolación lineal
+    pos = (percentil / 100) * (n - 1)
+    pos_entera = int(pos)
+    pos_decimal = pos - pos_entera
+    
+    if pos_entera == n - 1: 
+        return datos_ordenados[-1]
+    else: 
+        # Interpolación entre valores adyacentes
+        return (datos_ordenados[pos_entera] * (1 - pos_decimal) + 
+                datos_ordenados[pos_entera + 1] * pos_decimal)</code></pre>
+    </div>
+</section>
+
+<!-- === SLIDE 4: ENCAPSULAMIENTO Y OPTIMIZACIÓN === -->
+<section class="codigo-slide">
+    <br></br>
+    <h2>Encapsulamiento y Optimización</h2>
+    <p>
+        Apliqué <strong>encapsulamiento</strong> para ocultar los detalles internos de implementación 
+        y proteger la integridad de los datos. También implementé técnicas de optimización como 
+        <strong>caching</strong> para mejorar el rendimiento.
+    </p>
+    <div class="codigo-scroll">
+<pre><code># === MÉTODO PRIVADO para operaciones internas ===
+def _ordenar_datos(self):
+    """
+    MÉTODO ENCAPSULADO: Solo para uso interno
+    Implementa caching para evitar reordenamientos múltiples
+    """
+    if self._datos_ordenados is None:
+        self._datos_ordenados = sorted(self.datos)
+    return self._datos_ordenados
+
+# === OPTIMIZACIÓN con CACHE ===
+# Los métodos que usan datos ordenados se benefician del cache:
+def mediana(self):
+    datos_ordenados = self._ordenar_datos()  # ← Usa cache si disponible
+    # ... cálculo de mediana
+
+def percentil(self, percentil):
+    datos_ordenados = self._ordenar_datos()  # ← Mismo cache
+    # ... cálculo de percentil
+
+# === VALIDACIÓN ROBUSTA en constructor ===
+def __init__(self, datos):
+    # Validación en DOS niveles:
+    # 1. Tipo de contenedor (lista/tupla)
+    if not isinstance(datos, (list, tuple)):
+        raise TypeError("❌ Los datos deben ser lista o tupla")
+    
+    # 2. Tipo de cada elemento (numérico)
+    for i, dato in enumerate(datos):
+        if not isinstance(dato, (int, float)):
+            raise TypeError(f"❌ Elemento {i} no es numérico: {type(dato)}")
+    
+    self.datos = list(datos)
+    self._datos_ordenados = None  # ← Cache inicializado</code></pre>
+    </div>
+    <div style="background: #d1ecf1; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+        <strong>⚡ Beneficio del Cache:</strong> Si múltiples métodos necesitan datos ordenados 
+        (mediana, percentiles, cuartiles), solo se ordenan UNA vez, mejorando significativamente 
+        el rendimiento con grandes volúmenes de datos.
+    </div>
+</section>
+
+<!-- === SLIDE 5: GIT Y BUENAS PRÁCTICAS === -->
+<section class="codigo-slide">
+    <br></br>
+    <h2>⚡ Flujo de Trabajo con Git</h2>
+    <p>
+        Implementé un flujo de trabajo colaborativo usando Git, aplicando comandos específicos 
+        para desarrollo en equipo, control de versiones y mantenimiento del repositorio.
+    </p>
+    <div class="codigo-scroll">
+<pre><code># === CONFIGURACIÓN INICIAL ===
 git init
-git add .
-git commit -m "feat: quantitative statistics implementation"
+git config user.name "Jean Malvacedo"
+git config user.email "jean@example.com"
+git remote add origin https://github.com/equipo/Parcial-LP2.git
 
-# Trabajo colaborativo  
+# === DESARROLLO ITERATIVO - Ciclo de trabajo ===
+# 1. Actualizar con cambios del equipo:
 git pull origin main
+
+# 2. Desarrollar mi parte (estadísticas cuantitativas):
+git add estadistica_cuantitativa.py
+git commit -m "feat: implement media, median and variance algorithms"
+
+# 3. Subir mis contribuciones:
 git push origin main
 
-# Limpieza de archivos
-git rm --cached archivos_temporales
-git commit -m "clean: remove temporary files"
-        </code></pre>
+# === MANEJO DE ARCHIVOS TEMPORALES ===
+# .gitignore protege automáticamente, pero si se subieron:
+git rm --cached libreria/datos_simulados.csv
+git rm -r --cached libreria/estadisticas_poo/__pycache__
+git commit -m "chore: remove temporary files from tracking"
+
+# === RESOLUCIÓN DE CONFLICTOS ===
+# Si hay conflictos al hacer pull:
+git status                    # 🔍 Ver archivos en conflicto
+git diff                      # 📊 Ver diferencias específicas
+# Editar manualmente los archivos conflictivos...
+git add .                     # ✅ Marcar conflictos resueltos
+git commit -m "fix: resolve merge conflicts in quantitative module"
+git push origin main          # 🚀 Subir solución</code></pre>
     </div>
-    </section>
+    <div style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+        <strong>🔗 Integración Continua:</strong> Este flujo garantiza que el trabajo individual 
+        se integre suavemente con las contribuciones del equipo, manteniendo la estabilidad del proyecto.
+    </div>
+</section>
+
 
     <section class="codigo-slide">
         <br></br>
