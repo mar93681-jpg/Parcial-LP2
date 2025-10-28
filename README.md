@@ -113,6 +113,5 @@ El proyecto está dividido en tres módulos:
      EstadisticaBase <|-- EstadisticaCualitativa
      
      %% "Utiliza" (Depende de)
-     Main ..> EstadisticaBase : utiliza
      Main ..> EstadisticaCuantitativa : utiliza
      Main ..> EstadisticaCualitativa : utiliza
