@@ -148,7 +148,7 @@ footer {
         <h2>Integrantes</h2>
         <div class="team-members">
             <div class="member">Malvacedo Quiñonez, Jean Franco</div>
-            <div class="member">Cruz Cruz, Hilary Penelope</div>
+            <div class="member">Cruz Cruz, Hilary Penélope</div>
             <div class="member">Chávez Mendoza, María Fernanda</div>
             <div class="member">Mejía Auccapoma, Piero César</div>
         </div>
@@ -254,6 +254,66 @@ class EstadisticaBase(ABC):
         print("----------------------------")
 </code></pre>
         </div>
+    </section>
+
+    <section class="codigo-slide">
+        <h2>Implementación POO - Estadísticas Cuantitativas</h2>
+    
+    <div class="concept-box">
+        <h3>Herencia Aplicada</h3>
+        <pre><code class="python">
+class EstadisticaCuantitativa(EstadisticaBase):
+    # Hereda: __init__, cantidad_datos(), tipo_datos()
+    # Implementa: promedio(), minimo(), maximo(), resumen()
+        </code></pre>
+        <p><strong>Explicación:</strong> Mi clase especializa el comportamiento para datos numéricos, manteniendo la interfaz común definida por la clase base.</p>
+    </div>
+
+    <div class="concept-box">
+        <h3>Polimorfismo en 3 Niveles</h3>
+        <pre><code class="python">
+# 1. SOBRESCRITURA:
+def promedio(self): 
+    return self.media()  # vs. return None en cualitativa
+
+# 2. FUNCIÓN POLIMÓRFICA:
+def mostrar_resumen(objeto):
+    objeto.resumen()  # ← Comportamiento diferente según el tipo
+
+# 3. MÉTODOS ABSTRACTOS:
+@abstractmethod
+def resumen(self): pass  # Implementación específica en cada clase
+        </code></pre>
+    </div>
+
+    <div class="concept-box">
+        <h3>Algoritmos Estadísticos Implementados</h3>
+        <ul>
+            <li><strong>Media:</strong> Σxᵢ / n</li>
+            <li><strong>Mediana:</strong> Algoritmo de búsqueda en datos ordenados</li>
+            <li><strong>Varianza:</strong> Σ(xᵢ - μ)² / N con corrección de Bessel</li>
+            <li><strong>Percentiles:</strong> Interpolación lineal entre posiciones</li>
+            <li><strong>Moda:</strong> Conteo de frecuencias con diccionarios</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <h3>Comandos Git Utilizados</h3>
+        <pre><code class="bash">
+# Configuración inicial
+git init
+git add .
+git commit -m "feat: quantitative statistics implementation"
+
+# Trabajo colaborativo  
+git pull origin main
+git push origin main
+
+# Limpieza de archivos
+git rm --cached archivos_temporales
+git commit -m "clean: remove temporary files"
+        </code></pre>
+    </div>
     </section>
 
     <section class="codigo-slide">
