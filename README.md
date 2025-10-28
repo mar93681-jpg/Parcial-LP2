@@ -115,3 +115,13 @@ classDiagram
     Main ..> EstadisticaCualitativa : utiliza
 
 
+
+<br>
+<br>
+
+---
+
+## 🏗️ Diagrama de Arquitectura del Sistema
+
+<img src="https://raw.githubusercontent.com/mar93681-jpg/Parcial-LP2/refs/heads/main/arquitectura.svg" alt="Diagrama de Arquitectura" width="100%">
+
