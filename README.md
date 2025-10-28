@@ -78,7 +78,7 @@ El proyecto está dividido en tres módulos:
 
  ## Diagrama de Clases (UML)
  
- ```
+ ```mermaid
 classDiagram
     direction TB  %% arriba → abajo
 
