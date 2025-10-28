@@ -113,3 +113,7 @@ classDiagram
 
     Main ..> EstadisticaCuantitativa : utiliza
     Main ..> EstadisticaCualitativa : utiliza
+
+
+
+![Diagrama de Arquitectura](arquitectura.svg)
