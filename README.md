@@ -75,3 +75,44 @@ El proyecto está dividido en tres módulos:
 7. [Datos Simulados (datos_simulados.csv)](Data/datos_simulados.csv)
 8. [Integración, Polimorfismo y Pruebas (main.py)](libreria/estadisticas_poo/main.py)
 9. [Módulo Principal (main.ipynb)](notebooks/main.ipynb)
+
+ ## Diagrama de Clases (UML)
+ 
+ ```mermaid
+ classDiagram
+     direction BT
+     
+     class Main {
+         +main.py()
+     }
+ 
+     class EstadisticaBase {
+         <<abstract>>
+         +datos
+         +cantidad_datos()
+         +tipo_datos()
+         +resumen()*
+     }
+     
+     class EstadisticaCuantitativa {
+         +media()
+         +mediana()
+         +varianza()
+         +percentil()
+         +resumen()
+     }
+ 
+     class EstadisticaCualitativa {
+         +moda()
+         +tabla_frecuencias()
+         +resumen()
+     }
+ 
+     %% "Amplia" (Hereda de)
+     EstadisticaBase <|-- EstadisticaCuantitativa
+     EstadisticaBase <|-- EstadisticaCualitativa
+     
+     %% "Utiliza" (Depende de)
+     Main ..> EstadisticaBase : utiliza
+     Main ..> EstadisticaCuantitativa : utiliza
+     Main ..> EstadisticaCualitativa : utiliza
