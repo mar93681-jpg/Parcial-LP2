@@ -227,35 +227,6 @@ class EstadisticaBase(ABC):
         </div>
     </section>
 
-    <section class="codigo-slide">
-        <br></br>
-        <h2>Estadística básica</h2>
-        <p>
-            La clase <strong>EstadCB</strong> es una implementación concreta de la clase abstracta <strong>EstadisticaBase</strong>. Proporciona métodos para calcular el promedio, el valor mínimo, el valor máximo y un método para imprimir un resumen completo de las estadísticas de los datos.
-        </p>
-        <div class="codigo-scroll">
-<pre><code>class EstadCB(EstadisticaBase):
-    def promedio(self):
-        return sum(self.datos) / len(self.datos) if self.datos else 0
-
-    def minimo(self):
-        return min(self.datos)
-
-    def maximo(self):
-        return max(self.datos)
-
-    def resumen(self):
-        print("----- RESUMEN DE DATOS -----")
-        print(f"Tipo de clase: {self.tipo_datos()}")
-        print(f"Cantidad de datos: {self.cantidad_datos()}")
-        print(f"Valor mínimo: {self.minimo()}")
-        print(f"Valor máximo: {self.maximo()}")
-        print(f"Promedio: {self.promedio():.2f}")
-        print("----------------------------")
-</code></pre>
-        </div>
-    </section>
-
     
 <!-- === SLIDE 5: GIT Y BUENAS PRÁCTICAS === -->
 <section class="codigo-slide">
