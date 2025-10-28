@@ -418,60 +418,7 @@ def percentil(self, percentil):
 def _ordenar_datos(self):
     """
     MÉTODO ENCAPSULADO: Solo para uso interno
-    Implementa caching para evitar reordenamientos múltiples
-    """
-    if self._datos_ordenados is None:
-        self._datos_ordenados = sorted(self.datos)
-    return self._datos_ordenados</code></pre>
-    </div>
-    <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #2ecc71;">
-        <strong>Encapsulamiento Aplicado:</strong> El guión bajo en <code>_ordenar_datos()</code> convierte este método en privado, 
-        ocultando los detalles de implementación y protegiendo la integridad de los datos.
-    </div>
 
-    <div class="codigo-scroll">
-<pre><code># === OPTIMIZACIÓN con CACHE ===
-# Los métodos que usan datos ordenados se benefician del cache:
-def mediana(self):
-    datos_ordenados = self._ordenar_datos()  # ← Usa cache si disponible
-    # ... cálculo de mediana
-
-def percentil(self, percentil):
-    datos_ordenados = self._ordenar_datos()  # ← Mismo cache
-    # ... cálculo de percentil</code></pre>
-    </div>
-    <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #3498db;">
-        <strong>Optimización con Caché:</strong> Múltiples métodos reutilizan el mismo caché de datos ordenados, 
-        evitando operaciones redundantes y mejorando significativamente el rendimiento.
-    </div>
-
-    <div class="codigo-scroll">
-<pre><code># === VALIDACIÓN ROBUSTA en constructor ===
-def __init__(self, datos):
-    # Validación en DOS niveles:
-    # 1. Tipo de contenedor (lista/tupla)
-    if not isinstance(datos, (list, tuple)):
-        raise TypeError("Los datos deben ser lista o tupla")
-    
-    # 2. Tipo de cada elemento (numérico)
-    for i, dato in enumerate(datos):
-        if not isinstance(dato, (int, float)):
-            raise TypeError(f"Elemento {i} no es numérico: {type(dato)}")
-    
-    self.datos = list(datos)
-    self._datos_ordenados = None  # ← Cache inicializado</code></pre>
-    </div>
-    <div style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #f39c12;">
-        <strong>Validación Robusta:</strong> Doble capa de validación que garantiza la integridad de los datos 
-        desde el momento de la creación del objeto, previniendo errores en tiempo de ejecución.
-    </div>
-
-    <div style="background: #d1ecf1; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-        <strong>Beneficio del Caché:</strong> Cuando múltiples métodos necesitan datos ordenados 
-        (mediana, percentiles, cuartiles), estos solo se ordenan UNA vez, mejorando significativamente 
-        el rendimiento con grandes volúmenes de datos y demostrando un diseño eficiente.
-    </div>
-</section>
 
 <!-- === SLIDE 5: GIT Y BUENAS PRÁCTICAS === -->
 <section class="codigo-slide">
