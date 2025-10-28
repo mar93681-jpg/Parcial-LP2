@@ -303,10 +303,10 @@ class EstadisticaCuantitativa(EstadisticaBase):
     </div>
 </section>
 
-<!-- === SLIDE 2: POLIMORFISMO DETALLADO === -->
+<!-- === SLIDE 2: POLIMORFISMO === -->
 <section class="codigo-slide">
     <br></br>
-    <h2>Polimorfismo en 3 Dimensiones</h2>
+    <h2>Polimorfismo</h2>
     <p>
         El <strong>polimorfismo</strong> permite que el mismo método o función se comporte de manera diferente 
         según el tipo de objeto. En nuestro proyecto, implementé polimorfismo en tres niveles distintos, 
@@ -325,7 +325,7 @@ def promedio(self):
 # === 2. POLIMORFISMO EN FUNCIONES ===
 def mostrar_resumen(objeto_estadistico):
     """Función que acepta CUALQUIER tipo de estadística"""
-    print(f'\n📊 Resumen ({objeto_estadistico.tipo_datos()})')
+    print(f'\nResumen ({objeto_estadistico.tipo_datos()})')
     objeto_estadistico.resumen()  # ← Comportamiento DIFERENTE según el tipo
 
 # USO POLIMÓRFICO:
@@ -348,7 +348,7 @@ def resumen(self): pass
     <br></br>
     <h2>Algoritmos Estadísticos Implementados</h2>
     <p>
-        Se impplementaron manualmente 8 algoritmos estadísticos fundamentales, cada uno con su fórmula matemática 
+        Se implementaron manualmente 8 algoritmos estadísticos fundamentales, cada uno con su fórmula matemática 
         y lógica de programación específica. Todos incluyen validaciones robustas y manejo de casos edge.
     </p>
     <div class="codigo-scroll">
@@ -371,7 +371,7 @@ def mediana(self):
         # Caso par: promedio de los dos centrales
         return (datos_ordenados[n // 2 - 1] + datos_ordenados[n // 2]) / 2
 
-# === VARIANZA con corrección de Bessel ===
+# === VARIANZA===
 def varianza(self, poblacional=True):
     """Σ(xᵢ - μ)² / N (población) o / (N-1) (muestra)"""
     if len(self.datos) < 2: 
@@ -409,8 +409,8 @@ def percentil(self, percentil):
     <br></br>
     <h2>Encapsulamiento y Optimización</h2>
     <p>
-        Apliqué <strong>encapsulamiento</strong> para ocultar los detalles internos de implementación 
-        y proteger la integridad de los datos. También implementé técnicas de optimización como 
+        Se aplicó <strong>encapsulamiento</strong> para ocultar los detalles internos de implementación 
+        y proteger la integridad de los datos. También la implementación de técnicas de optimización como 
         <strong>caching</strong> para mejorar el rendimiento.
     </p>
     <div class="codigo-scroll">
@@ -422,9 +422,15 @@ def _ordenar_datos(self):
     """
     if self._datos_ordenados is None:
         self._datos_ordenados = sorted(self.datos)
-    return self._datos_ordenados
+    return self._datos_ordenados</code></pre>
+    </div>
+    <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #2ecc71;">
+        <strong>Encapsulamiento Aplicado:</strong> El guión bajo en <code>_ordenar_datos()</code> convierte este método en privado, 
+        ocultando los detalles de implementación y protegiendo la integridad de los datos.
+    </div>
 
-# === OPTIMIZACIÓN con CACHE ===
+    <div class="codigo-scroll">
+<pre><code># === OPTIMIZACIÓN con CACHE ===
 # Los métodos que usan datos ordenados se benefician del cache:
 def mediana(self):
     datos_ordenados = self._ordenar_datos()  # ← Usa cache si disponible
@@ -432,75 +438,75 @@ def mediana(self):
 
 def percentil(self, percentil):
     datos_ordenados = self._ordenar_datos()  # ← Mismo cache
-    # ... cálculo de percentil
+    # ... cálculo de percentil</code></pre>
+    </div>
+    <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #3498db;">
+        <strong>Optimización con Caché:</strong> Múltiples métodos reutilizan el mismo caché de datos ordenados, 
+        evitando operaciones redundantes y mejorando significativamente el rendimiento.
+    </div>
 
-# === VALIDACIÓN ROBUSTA en constructor ===
+    <div class="codigo-scroll">
+<pre><code># === VALIDACIÓN ROBUSTA en constructor ===
 def __init__(self, datos):
     # Validación en DOS niveles:
     # 1. Tipo de contenedor (lista/tupla)
     if not isinstance(datos, (list, tuple)):
-        raise TypeError("❌ Los datos deben ser lista o tupla")
+        raise TypeError("Los datos deben ser lista o tupla")
     
     # 2. Tipo de cada elemento (numérico)
     for i, dato in enumerate(datos):
         if not isinstance(dato, (int, float)):
-            raise TypeError(f"❌ Elemento {i} no es numérico: {type(dato)}")
+            raise TypeError(f"Elemento {i} no es numérico: {type(dato)}")
     
     self.datos = list(datos)
     self._datos_ordenados = None  # ← Cache inicializado</code></pre>
     </div>
+    <div style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #f39c12;">
+        <strong>Validación Robusta:</strong> Doble capa de validación que garantiza la integridad de los datos 
+        desde el momento de la creación del objeto, previniendo errores en tiempo de ejecución.
+    </div>
+
     <div style="background: #d1ecf1; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-        <strong>⚡ Beneficio del Cache:</strong> Si múltiples métodos necesitan datos ordenados 
-        (mediana, percentiles, cuartiles), solo se ordenan UNA vez, mejorando significativamente 
-        el rendimiento con grandes volúmenes de datos.
+        <strong>Beneficio del Caché:</strong> Cuando múltiples métodos necesitan datos ordenados 
+        (mediana, percentiles, cuartiles), estos solo se ordenan UNA vez, mejorando significativamente 
+        el rendimiento con grandes volúmenes de datos y demostrando un diseño eficiente.
     </div>
 </section>
 
 <!-- === SLIDE 5: GIT Y BUENAS PRÁCTICAS === -->
 <section class="codigo-slide">
     <br></br>
-    <h2>⚡ Flujo de Trabajo con Git</h2>
-    <p>
-        Implementé un flujo de trabajo colaborativo usando Git, aplicando comandos específicos 
-        para desarrollo en equipo, control de versiones y mantenimiento del repositorio.
-    </p>
+    <h2>Flujo de Trabajo Git</h2>
+
     <div class="codigo-scroll">
-<pre><code># === CONFIGURACIÓN INICIAL ===
-git init
-git config user.name "Jean Malvacedo"
-git config user.email "jean@example.com"
-git remote add origin https://github.com/equipo/Parcial-LP2.git
+    </div>
+    <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #2ecc71;">
+        <strong>Descarga:</strong> git pull origin main
+    </div>
 
-# === DESARROLLO ITERATIVO - Ciclo de trabajo ===
-# 1. Actualizar con cambios del equipo:
-git pull origin main
 
-# 2. Desarrollar mi parte (estadísticas cuantitativas):
-git add estadistica_cuantitativa.py
+    <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #3498db;">
+        <strong>DESARROLLAR:</strong> git add estadistica_cuantitativa.py
 git commit -m "feat: implement media, median and variance algorithms"
+    </div>
 
-# 3. Subir mis contribuciones:
+    <div style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #f39c12;">
+        <strong>Integración Grupal:</strong> git push origin main
+    </div>
+
+    <div style="background: #f8d7da; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #e74c3c;">
+        <strong>LIMPIEZA Y ORGANIZACIÓN </strong> git rm --cached libreria/__pycache__/
+git commit -m "chore: remove temporary files"
+    </div>
+
+    <div style="background: #d1ecf1; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; border-left: 4px solid #17a2b8;">
+        <strong>RESOLVER </strong> git status                    # Identificar problemas
+git diff                      # Analizar diferencias
+git add .                     # Confirmar soluciones  
+git commit -m "fix: resolve merge conflicts"
 git push origin main
-
-# === MANEJO DE ARCHIVOS TEMPORALES ===
-# .gitignore protege automáticamente, pero si se subieron:
-git rm --cached libreria/datos_simulados.csv
-git rm -r --cached libreria/estadisticas_poo/__pycache__
-git commit -m "chore: remove temporary files from tracking"
-
-# === RESOLUCIÓN DE CONFLICTOS ===
-# Si hay conflictos al hacer pull:
-git status                    # 🔍 Ver archivos en conflicto
-git diff                      # 📊 Ver diferencias específicas
-# Editar manualmente los archivos conflictivos...
-git add .                     # ✅ Marcar conflictos resueltos
-git commit -m "fix: resolve merge conflicts in quantitative module"
-git push origin main          # 🚀 Subir solución</code></pre>
     </div>
-    <div style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-        <strong>🔗 Integración Continua:</strong> Este flujo garantiza que el trabajo individual 
-        se integre suavemente con las contribuciones del equipo, manteniendo la estabilidad del proyecto.
-    </div>
+
 </section>
 
 
