@@ -37,7 +37,7 @@
 |---------------|----------|
 | Malvacedo Quiñonez, Jean Franco  | Tarea 1: Arquitectura y Clase Base (25%)  |
 | Cruz Cruz, Hilary Penelope       | Tarea 2: Estadísticas Cuantitativas (25%)  |
-| Maria Fernanda, Chávez Mendoza   | Tarea 3: Estadísticas Cualitativas (25%)  |
+| Chávez Mendoza, Maria Fernanda   | Tarea 3: Estadísticas Cualitativas (25%)  |
 | Mejia Auccapoma, Piero Cesar     | Tarea 4: Integración, Polimorfismo y Pruebas (25%)  |
 
 ---
