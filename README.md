@@ -76,6 +76,9 @@ El proyecto está dividido en tres módulos:
 8. [Integración, Polimorfismo y Pruebas (main.py)](libreria/estadisticas_poo/main.py)
 9. [Módulo Principal (main.ipynb)](notebooks/main.ipynb)
 
+## Diagrama de Clases (UML)
+ 
+```mermaid
 classDiagram
     direction TB  %% de arriba hacia abajo
 
