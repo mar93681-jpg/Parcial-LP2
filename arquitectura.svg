@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1222px" preserveAspectRatio="none" style="width:1393px;height:1222px;background:#FFFFFF;" version="1.1" viewBox="0 0 1393 1222" width="1393px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="42.5938" id="_title" style="stroke:none;stroke-width:1.0;" width="402" x="488.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="392" x="493.5" y="22.9951">ARQUITECTURA REAL - LIBRERÍA ESTADÍSTICA POO</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="275" x="552" y="39.292">Basado en el código implementado</text><!--MD5=[5f570a7beea27978211278dbc3f3ce6d]
+class SETUP--><g id="elem_SETUP"><rect codeLine="12" fill="#FFFFFF" height="113.8438" id="SETUP" rx="2.5" ry="2.5" style="stroke:#667EEA;stroke-width:0.5;" width="206" x="292.5" y="234.0938"/><ellipse cx="370.25" cy="250.0938" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M373.2188,255.7344 Q372.6406,256.0313 372,256.1719 Q371.3594,256.3281 370.6563,256.3281 Q368.1563,256.3281 366.8281,254.6875 Q365.5156,253.0313 365.5156,249.9063 Q365.5156,246.7813 366.8281,245.125 Q368.1563,243.4688 370.6563,243.4688 Q371.3594,243.4688 372,243.625 Q372.6563,243.7813 373.2188,244.0781 L373.2188,246.7969 Q372.5938,246.2188 372,245.9531 Q371.4063,245.6719 370.7813,245.6719 Q369.4375,245.6719 368.75,246.75 Q368.0625,247.8125 368.0625,249.9063 Q368.0625,252 368.75,253.0781 Q369.4375,254.1406 370.7813,254.1406 Q371.4063,254.1406 372,253.875 Q372.5938,253.5938 373.2188,253.0156 L373.2188,255.7344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="42" x="390.75" y="253.5557">setup.py</text><line style="stroke:#667EEA;stroke-width:0.5;" x1="293.5" x2="497.5" y1="266.0938" y2="266.0938"/><ellipse cx="303.5" cy="293.0547" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="122" x="312.5" y="295.0166">name: "estadisticas-poo"</text><ellipse cx="303.5" cy="304.6953" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="75" x="312.5" y="306.6572">version: "1.0.0"</text><ellipse cx="303.5" cy="316.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="127" x="312.5" y="318.2979">packages: find_packages()</text><ellipse cx="303.5" cy="327.9766" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="180" x="312.5" y="329.9385">install_requires: ["numpy", "pandas"]</text><ellipse cx="303.5" cy="339.6172" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="139" x="312.5" y="341.5791">author: "Equipo Parcial-LP2"</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="293.5" x2="308.5" y1="279.9141" y2="279.9141"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="174" x="308.5" y="282.876">CONFIGURACIÓN EMPAQUETADO</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="482.5" x2="497.5" y1="279.9141" y2="279.9141"/></g><!--MD5=[ce3f4bad6e531a4cc969abd626f0b379]
+class REQ--><g id="elem_REQ"><rect codeLine="21" fill="#FFFFFF" height="90.5625" id="REQ" rx="2.5" ry="2.5" style="stroke:#667EEA;stroke-width:0.5;" width="114" x="338.5" y="60.5938"/><ellipse cx="353.5" cy="76.5938" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M356.4688,82.2344 Q355.8906,82.5313 355.25,82.6719 Q354.6094,82.8281 353.9063,82.8281 Q351.4063,82.8281 350.0781,81.1875 Q348.7656,79.5313 348.7656,76.4063 Q348.7656,73.2813 350.0781,71.625 Q351.4063,69.9688 353.9063,69.9688 Q354.6094,69.9688 355.25,70.125 Q355.9063,70.2813 356.4688,70.5781 L356.4688,73.2969 Q355.8438,72.7188 355.25,72.4531 Q354.6563,72.1719 354.0313,72.1719 Q352.6875,72.1719 352,73.25 Q351.3125,74.3125 351.3125,76.4063 Q351.3125,78.5 352,79.5781 Q352.6875,80.6406 354.0313,80.6406 Q354.6563,80.6406 355.25,80.375 Q355.8438,80.0938 356.4688,79.5156 L356.4688,82.2344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="82" x="367.5" y="80.0557">requirements.txt</text><line style="stroke:#667EEA;stroke-width:0.5;" x1="339.5" x2="451.5" y1="92.5938" y2="92.5938"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="80" x="344.5" y="121.5166">numpy&gt;=1.21.0</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="75" x="344.5" y="133.1572">pandas&gt;=1.3.0</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="74" x="344.5" y="144.7979">jupyter&gt;=1.0.0</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="339.5" x2="353" y1="106.4141" y2="106.4141"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="85" x="353" y="109.376">DEPENDENCIAS</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="438" x2="451.5" y1="106.4141" y2="106.4141"/></g><!--MD5=[e54a41d9a7c84324b81628211b909b2f]
+class INIT--><g id="elem_INIT"><rect codeLine="28" fill="#FFFFFF" height="121.8438" id="INIT" rx="2.5" ry="2.5" style="stroke:#667EEA;stroke-width:0.5;" width="305" x="243" y="430.5938"/><ellipse cx="347.25" cy="446.5938" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M350.2188,452.2344 Q349.6406,452.5313 349,452.6719 Q348.3594,452.8281 347.6563,452.8281 Q345.1563,452.8281 343.8281,451.1875 Q342.5156,449.5313 342.5156,446.4063 Q342.5156,443.2813 343.8281,441.625 Q345.1563,439.9688 347.6563,439.9688 Q348.3594,439.9688 349,440.125 Q349.6563,440.2813 350.2188,440.5781 L350.2188,443.2969 Q349.5938,442.7188 349,442.4531 Q348.4063,442.1719 347.7813,442.1719 Q346.4375,442.1719 345.75,443.25 Q345.0625,444.3125 345.0625,446.4063 Q345.0625,448.5 345.75,449.5781 Q346.4375,450.6406 347.7813,450.6406 Q348.4063,450.6406 349,450.375 Q349.5938,450.0938 350.2188,449.5156 L350.2188,452.2344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="59" x="367.75" y="450.0557">estadisticas/</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" text-decoration="underline" textLength="14" x="426.75" y="450.0557">init</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="15" x="440.75" y="450.0557">.py</text><line style="stroke:#667EEA;stroke-width:0.5;" x1="244" x2="547" y1="462.5938" y2="462.5938"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="220" x="249" y="491.5166">from .EstadisticaBase import EstadisticaBase</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="293" x="249" y="503.1572">from .estadistica_cuantitativa import EstadisticaCuantitativa</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="277" x="249" y="514.7979">from .estadistica_cualitativa import EstadisticaCualitativa</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="244" x2="323.5" y1="476.4141" y2="476.4141"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="144" x="323.5" y="479.376">EXPORTACIONES PÚBLICAS</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="467.5" x2="547" y1="476.4141" y2="476.4141"/><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="244" x2="547" y1="521.1563" y2="521.1563"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="48" x="249" y="534.4385">__all__ = [</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="4" x="249" y="546.0791">]</text></g><!--MD5=[906f0831f58c7a25a472bb033653a7df]
+class EB--><g id="elem_EB"><rect codeLine="42" fill="#FFFFFF" height="196.0469" id="EB" rx="2.5" ry="2.5" style="stroke:#667EEA;stroke-width:0.5;" width="133" x="329" y="629.5938"/><ellipse cx="355.25" cy="645.5938" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M358.2188,651.2344 Q357.6406,651.5313 357,651.6719 Q356.3594,651.8281 355.6563,651.8281 Q353.1563,651.8281 351.8281,650.1875 Q350.5156,648.5313 350.5156,645.4063 Q350.5156,642.2813 351.8281,640.625 Q353.1563,638.9688 355.6563,638.9688 Q356.3594,638.9688 357,639.125 Q357.6563,639.2813 358.2188,639.5781 L358.2188,642.2969 Q357.5938,641.7188 357,641.4531 Q356.4063,641.1719 355.7813,641.1719 Q354.4375,641.1719 353.75,642.25 Q353.0625,643.3125 353.0625,645.4063 Q353.0625,647.5 353.75,648.5781 Q354.4375,649.6406 355.7813,649.6406 Q356.4063,649.6406 357,649.375 Q357.5938,649.0938 358.2188,648.5156 L358.2188,651.2344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="76" x="371.75" y="649.0557">EstadisticaBase</text><line style="stroke:#667EEA;stroke-width:0.5;" x1="330" x2="461" y1="661.5938" y2="661.5938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="337" y="685.5547"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="46" x="349" y="690.5166">datos: list</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="330" x2="367" y1="675.4141" y2="675.4141"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="57" x="367" y="678.376">ATRIBUTOS</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="424" x2="461" y1="675.4141" y2="675.4141"/><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="330" x2="461" y1="696.875" y2="696.875"/><ellipse cx="340" cy="723.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" font-style="italic" lengthAdjust="spacing" textLength="54" x="349" y="725.7979">promedio()</text><ellipse cx="340" cy="735.4766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" font-style="italic" lengthAdjust="spacing" textLength="44" x="349" y="737.4385">minimo()</text><ellipse cx="340" cy="747.1172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" font-style="italic" lengthAdjust="spacing" textLength="48" x="349" y="749.0791">maximo()</text><ellipse cx="340" cy="758.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" font-style="italic" lengthAdjust="spacing" textLength="51" x="349" y="760.7197">resumen()</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="330" x2="334" y1="710.6953" y2="710.6953"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="123" x="334" y="713.6572">MÉTODOS ABSTRACTOS</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="457" x2="461" y1="710.6953" y2="710.6953"/><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="330" x2="461" y1="767.0781" y2="767.0781"/><ellipse cx="340" cy="794.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="107" x="349" y="796.001">cantidad_datos() → int</text><ellipse cx="340" cy="805.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="85" x="349" y="807.6416">tipo_datos() → str</text><ellipse cx="340" cy="817.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="88" x="349" y="819.2822">__init__(datos: list)</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="330" x2="335" y1="780.8984" y2="780.8984"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="121" x="335" y="783.8604">MÉTODOS CONCRETOS</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="456" x2="461" y1="780.8984" y2="780.8984"/></g><!--MD5=[8267bec125f52e80385d31a196b921a9]
+class EC--><g id="elem_EC"><rect codeLine="58" fill="#FFFFFF" height="312.8125" id="EC" rx="2.5" ry="2.5" style="stroke:#667EEA;stroke-width:0.5;" width="282" x="254.5" y="902.5938"/><ellipse cx="335.25" cy="918.5938" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M338.2188,924.2344 Q337.6406,924.5313 337,924.6719 Q336.3594,924.8281 335.6563,924.8281 Q333.1563,924.8281 331.8281,923.1875 Q330.5156,921.5313 330.5156,918.4063 Q330.5156,915.2813 331.8281,913.625 Q333.1563,911.9688 335.6563,911.9688 Q336.3594,911.9688 337,912.125 Q337.6563,912.2813 338.2188,912.5781 L338.2188,915.2969 Q337.5938,914.7188 337,914.4531 Q336.4063,914.1719 335.7813,914.1719 Q334.4375,914.1719 333.75,915.25 Q333.0625,916.3125 333.0625,918.4063 Q333.0625,920.5 333.75,921.5781 Q334.4375,922.6406 335.7813,922.6406 Q336.4063,922.6406 337,922.375 Q337.5938,922.0938 338.2188,921.5156 L338.2188,924.2344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="112" x="355.75" y="922.0557">EstadisticaCuantitativa</text><line style="stroke:#667EEA;stroke-width:0.5;" x1="255.5" x2="535.5" y1="934.5938" y2="934.5938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="262.5" y="958.5547"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="147" x="274.5" y="963.5166">_datos_ordenados: list = None</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="255.5" x2="338.5" y1="948.4141" y2="948.4141"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="114" x="338.5" y="951.376">ATRIBUTOS PRIVADOS</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="452.5" x2="535.5" y1="948.4141" y2="948.4141"/><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="255.5" x2="535.5" y1="969.875" y2="969.875"/><ellipse cx="265.5" cy="996.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="74" x="274.5" y="998.7979">media() → float</text><ellipse cx="265.5" cy="1008.4766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="86" x="274.5" y="1010.4385">mediana() → float</text><ellipse cx="265.5" cy="1020.1172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="63" x="274.5" y="1022.0791">moda() → list</text><ellipse cx="265.5" cy="1031.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="199" x="274.5" y="1033.7197">varianza(poblacional: bool = True) → float</text><ellipse cx="265.5" cy="1043.3984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="256" x="274.5" y="1045.3604">desviacion_estandar(poblacional: bool = True) → float</text><ellipse cx="265.5" cy="1055.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="72" x="274.5" y="1057.001">rango() → float</text><ellipse cx="265.5" cy="1066.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="141" x="274.5" y="1068.6416">rango_intercuartilico() → float</text><ellipse cx="265.5" cy="1078.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="154" x="274.5" y="1080.2822">percentil(percentil: float) → float</text><ellipse cx="265.5" cy="1089.9609" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="86" x="274.5" y="1091.9229">cuartiles() → tuple</text><ellipse cx="265.5" cy="1101.6016" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="144" x="274.5" y="1103.5635">coeficiente_variacion() → float</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="255.5" x2="304.5" y1="983.6953" y2="983.6953"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="182" x="304.5" y="986.6572">MÉTODOS PÚBLICOS PRINCIPALES</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="486.5" x2="535.5" y1="983.6953" y2="983.6953"/><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="255.5" x2="535.5" y1="1109.9219" y2="1109.9219"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="262.5" y="1133.8828"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="110" x="274.5" y="1138.8447">_ordenar_datos() → list</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="255.5" x2="341" y1="1123.7422" y2="1123.7422"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="109" x="341" y="1126.7041">MÉTODOS PRIVADOS</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="450" x2="535.5" y1="1123.7422" y2="1123.7422"/><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="255.5" x2="535.5" y1="1145.2031" y2="1145.2031"/><ellipse cx="265.5" cy="1172.1641" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="90" x="274.5" y="1174.126">promedio() → float</text><ellipse cx="265.5" cy="1183.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="80" x="274.5" y="1185.7666">minimo() → float</text><ellipse cx="265.5" cy="1195.4453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="84" x="274.5" y="1197.4072">maximo() → float</text><ellipse cx="265.5" cy="1207.0859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="85" x="274.5" y="1209.0479">resumen() → void</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="255.5" x2="314" y1="1159.0234" y2="1159.0234"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="163" x="314" y="1161.9854">MÉTODOS OBLIGATORIOS BASE</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="477" x2="535.5" y1="1159.0234" y2="1159.0234"/></g><!--MD5=[fc05a5dc725a61f79000b1ed55a93214]
+class ECL--><g id="elem_ECL"><rect codeLine="84" fill="#FFFFFF" height="160.7656" id="ECL" rx="2.5" ry="2.5" style="stroke:#667EEA;stroke-width:0.5;" width="210" x="839.5" y="978.5938"/><ellipse cx="888.25" cy="994.5938" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M891.2188,1000.2344 Q890.6406,1000.5313 890,1000.6719 Q889.3594,1000.8281 888.6563,1000.8281 Q886.1563,1000.8281 884.8281,999.1875 Q883.5156,997.5313 883.5156,994.4063 Q883.5156,991.2813 884.8281,989.625 Q886.1563,987.9688 888.6563,987.9688 Q889.3594,987.9688 890,988.125 Q890.6563,988.2813 891.2188,988.5781 L891.2188,991.2969 Q890.5938,990.7188 890,990.4531 Q889.4063,990.1719 888.7813,990.1719 Q887.4375,990.1719 886.75,991.25 Q886.0625,992.3125 886.0625,994.4063 Q886.0625,996.5 886.75,997.5781 Q887.4375,998.6406 888.7813,998.6406 Q889.4063,998.6406 890,998.375 Q890.5938,998.0938 891.2188,997.5156 L891.2188,1000.2344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="104" x="908.75" y="998.0557">EstadisticaCualitativa</text><line style="stroke:#667EEA;stroke-width:0.5;" x1="840.5" x2="1048.5" y1="1010.5938" y2="1010.5938"/><ellipse cx="850.5" cy="1037.5547" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="63" x="859.5" y="1039.5166">moda() → list</text><ellipse cx="850.5" cy="1049.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="123" x="859.5" y="1051.1572">tabla_frecuencias() → dict</text><ellipse cx="850.5" cy="1060.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="184" x="859.5" y="1062.7979">frecuencia_relativa(valor: Any) → float</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="840.5" x2="881.5" y1="1024.4141" y2="1024.4141"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="126" x="881.5" y="1027.376">MÉTODOS ESPECÍFICOS</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1007.5" x2="1048.5" y1="1024.4141" y2="1024.4141"/><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="840.5" x2="1048.5" y1="1069.1563" y2="1069.1563"/><ellipse cx="850.5" cy="1096.1172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="81" x="859.5" y="1098.0791">promedio() → str</text><ellipse cx="850.5" cy="1107.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="77" x="859.5" y="1109.7197">minimo() → Any</text><ellipse cx="850.5" cy="1119.3984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="81" x="859.5" y="1121.3604">maximo() → Any</text><ellipse cx="850.5" cy="1131.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="85" x="859.5" y="1133.001">resumen() → void</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="840.5" x2="863" y1="1082.9766" y2="1082.9766"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="163" x="863" y="1085.9385">MÉTODOS OBLIGATORIOS BASE</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1026" x2="1048.5" y1="1082.9766" y2="1082.9766"/></g><!--MD5=[c312291b21daaf12d404deb9290af1c7]
+class DEMO--><g id="elem_DEMO"><rect codeLine="98" fill="#FFFFFF" height="125.8438" id="DEMO" rx="2.5" ry="2.5" style="stroke:#667EEA;stroke-width:0.5;" width="355" x="1031" y="664.5938"/><ellipse cx="1148.75" cy="680.5938" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1151.7188,686.2344 Q1151.1406,686.5313 1150.5,686.6719 Q1149.8594,686.8281 1149.1563,686.8281 Q1146.6563,686.8281 1145.3281,685.1875 Q1144.0156,683.5313 1144.0156,680.4063 Q1144.0156,677.2813 1145.3281,675.625 Q1146.6563,673.9688 1149.1563,673.9688 Q1149.8594,673.9688 1150.5,674.125 Q1151.1563,674.2813 1151.7188,674.5781 L1151.7188,677.2969 Q1151.0938,676.7188 1150.5,676.4531 Q1149.9063,676.1719 1149.2813,676.1719 Q1147.9375,676.1719 1147.25,677.25 Q1146.5625,678.3125 1146.5625,680.4063 Q1146.5625,682.5 1147.25,683.5781 Q1147.9375,684.6406 1149.2813,684.6406 Q1149.9063,684.6406 1150.5,684.375 Q1151.0938,684.0938 1151.7188,683.5156 L1151.7188,686.2344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="111" x="1169.25" y="684.0557">demo_polimorfismo.py</text><line style="stroke:#667EEA;stroke-width:0.5;" x1="1032" x2="1385" y1="696.5938" y2="696.5938"/><ellipse cx="1042" cy="723.5547" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="181" x="1051" y="725.5166">mostrar_resumen(objeto_estadistico)</text><ellipse cx="1042" cy="735.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="127" x="1051" y="737.1572">demostrar_polimorfismo()</text><ellipse cx="1042" cy="746.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="32" x="1051" y="748.7979">main()</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1032" x2="1140.5" y1="710.4141" y2="710.4141"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="136" x="1140.5" y="713.376">FUNCIONES PRINCIPALES</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1276.5" x2="1385" y1="710.4141" y2="710.4141"/><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1032" x2="1385" y1="755.1563" y2="755.1563"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="343" x="1037" y="784.0791">from estadisticas import EstadisticaCuantitativa, EstadisticaCualitativa</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1032" x2="1163.5" y1="768.9766" y2="768.9766"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="90" x="1163.5" y="771.9385">IMPORTS REALES</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1253.5" x2="1385" y1="768.9766" y2="768.9766"/></g><!--MD5=[99e59e298f82d0739002b1da02b8f777]
+class CSV--><g id="elem_CSV"><rect codeLine="108" fill="#FFFFFF" height="90.5625" id="CSV" rx="2.5" ry="2.5" style="stroke:#667EEA;stroke-width:0.5;" width="241" x="1088" y="446.0938"/><ellipse cx="1154.75" cy="462.0938" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1157.7188,467.7344 Q1157.1406,468.0313 1156.5,468.1719 Q1155.8594,468.3281 1155.1563,468.3281 Q1152.6563,468.3281 1151.3281,466.6875 Q1150.0156,465.0313 1150.0156,461.9063 Q1150.0156,458.7813 1151.3281,457.125 Q1152.6563,455.4688 1155.1563,455.4688 Q1155.8594,455.4688 1156.5,455.625 Q1157.1563,455.7813 1157.7188,456.0781 L1157.7188,458.7969 Q1157.0938,458.2188 1156.5,457.9531 Q1155.9063,457.6719 1155.2813,457.6719 Q1153.9375,457.6719 1153.25,458.75 Q1152.5625,459.8125 1152.5625,461.9063 Q1152.5625,464 1153.25,465.0781 Q1153.9375,466.1406 1155.2813,466.1406 Q1155.9063,466.1406 1156.5,465.875 Q1157.0938,465.5938 1157.7188,465.0156 L1157.7188,467.7344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="99" x="1175.25" y="465.5557">datos_simulados.csv</text><line style="stroke:#667EEA;stroke-width:0.5;" x1="1089" x2="1328" y1="478.0938" y2="478.0938"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="198" x="1094" y="507.0166">ID, Edad, Horas_trabajadas_por_semana</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="223" x="1094" y="518.6572">Ingreso_mensual_miles, Gasto_mensual_miles</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="229" x="1094" y="530.2979">Color_favorito, Ocupacion, Estado_civil, Genero</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1089" x2="1159" y1="491.9141" y2="491.9141"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="99" x="1159" y="494.876">ESTRUCTURA REAL</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1258" x2="1328" y1="491.9141" y2="491.9141"/></g><!--MD5=[f4c44a902a240285b064c6bcec2e627f]
+class GITIGNORE--><g id="elem_GITIGNORE"><rect codeLine="116" fill="#FFFFFF" height="125.4844" id="GITIGNORE" rx="2.5" ry="2.5" style="stroke:#667EEA;stroke-width:0.5;" width="127" x="1145" y="228.5938"/><ellipse cx="1182.5" cy="244.5938" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1185.4688,250.2344 Q1184.8906,250.5313 1184.25,250.6719 Q1183.6094,250.8281 1182.9063,250.8281 Q1180.4063,250.8281 1179.0781,249.1875 Q1177.7656,247.5313 1177.7656,244.4063 Q1177.7656,241.2813 1179.0781,239.625 Q1180.4063,237.9688 1182.9063,237.9688 Q1183.6094,237.9688 1184.25,238.125 Q1184.9063,238.2813 1185.4688,238.5781 L1185.4688,241.2969 Q1184.8438,240.7188 1184.25,240.4531 Q1183.6563,240.1719 1183.0313,240.1719 Q1181.6875,240.1719 1181,241.25 Q1180.3125,242.3125 1180.3125,244.4063 Q1180.3125,246.5 1181,247.5781 Q1181.6875,248.6406 1183.0313,248.6406 Q1183.6563,248.6406 1184.25,248.375 Q1184.8438,248.0938 1185.4688,247.5156 L1185.4688,250.2344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="45" x="1201.5" y="248.0557">.gitignore</text><line style="stroke:#667EEA;stroke-width:0.5;" x1="1146" x2="1271" y1="260.5938" y2="260.5938"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="63" x="1165" y="289.5166">__pycache__/</text><ellipse cx="1156" cy="299.1953" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="20" x="1165" y="301.1572">.pyc</text><ellipse cx="1156" cy="310.8359" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="21" x="1165" y="312.7979">.pyo</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="21" x="1165" y="324.4385">.env</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="90" x="1165" y="336.0791">datos_temporales/</text><ellipse cx="1156" cy="345.7578" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="19" x="1165" y="347.7197">.csv</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1146" x2="1149" y1="274.4141" y2="274.4141"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="119" x="1149" y="277.376">ARCHIVOS EXCLUIDOS</text><line style="stroke:#667EEA;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1268" x2="1271" y1="274.4141" y2="274.4141"/></g><g id="elem_GMN235"><path d="M497.5,688.0938 L497.5,723.5938 L462.34,727.5938 L497.5,731.5938 L497.5,766.625 A0,0 0 0 0 497.5,766.625 L659.5,766.625 A0,0 0 0 0 659.5,766.625 L659.5,698.0938 L649.5,688.0938 L497.5,688.0938 A0,0 0 0 0 497.5,688.0938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M649.5,688.0938 L649.5,698.0938 L659.5,698.0938 L649.5,688.0938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120" x="503.5" y="705.1606">EstadisticaBase.py</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="135" x="503.5" y="720.2935">Clase abstracta base</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="503.5" y="735.4263">Define interfaz común</text><line style="stroke:#181818;stroke-width:1.0;" x1="498.5" x2="658.5" y1="738.4922" y2="738.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74" x="503.5" y="754.5591">Jean Franco</text></g><g id="elem_GMN238"><path d="M6,1019.5938 L6,1098.125 A0,0 0 0 0 6,1098.125 L219,1098.125 A0,0 0 0 0 219,1098.125 L219,1063.0938 L254.3,1059.0938 L219,1055.0938 L219,1029.5938 L209,1019.5938 L6,1019.5938 A0,0 0 0 0 6,1019.5938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M209,1019.5938 L209,1029.5938 L219,1029.5938 L209,1019.5938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="170" x="12" y="1036.6606">estadistica_cuantitativa.py</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="12" y="1051.7935">12 algoritmos estadísticos</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="192" x="12" y="1066.9263">Caching con _ordenar_datos()</text><line style="stroke:#181818;stroke-width:1.0;" x1="7" x2="218" y1="1069.9922" y2="1069.9922"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="12" y="1086.0591">Hilary Penelope</text></g><g id="elem_GMN241"><path d="M1085,1019.5938 L1085,1055.0938 L1049.62,1059.0938 L1085,1063.0938 L1085,1098.125 A0,0 0 0 0 1085,1098.125 L1266,1098.125 A0,0 0 0 0 1266,1098.125 L1266,1029.5938 L1256,1019.5938 L1085,1019.5938 A0,0 0 0 0 1085,1019.5938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1256,1019.5938 L1256,1029.5938 L1266,1029.5938 L1256,1019.5938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="1091" y="1036.6606">estadistica_cualitativa.py</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="1091" y="1051.7935">Análisis de frecuencias</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="144" x="1091" y="1066.9263">Tablas distribucionales</text><line style="stroke:#181818;stroke-width:1.0;" x1="1086" x2="1265" y1="1069.9922" y2="1069.9922"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="1091" y="1086.0591">María Fernanda</text></g><g id="elem_GMN244"><path d="M694.5,688.0938 L694.5,766.625 L874.5,766.625 L874.5,698.0938 L864.5,688.0938 L694.5,688.0938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M864.5,688.0938 L864.5,698.0938 L874.5,698.0938 L864.5,688.0938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="700.5" y="705.1606">demo_polimorfismo.py</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="138" x="700.5" y="720.2935">Integración y pruebas</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="700.5" y="735.4263">Demuestra polimorfismo</text><line style="stroke:#181818;stroke-width:1.0;" x1="695.5" x2="873.5" y1="738.4922" y2="738.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="700.5" y="754.5591">Piero César</text></g><!--MD5=[36661e0382ef8a0b5fa3e5056ba66e11]
+reverse link EB to EC--><g id="link_EB_EC"><path codeLine="127" d="M395.5,845.9237 C395.5,864.2238 395.5,883.3838 395.5,902.3738 " fill="none" id="EB-backto-EC" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="388.5,845.6737,395.5,825.6737,402.5,845.6737,388.5,845.6737" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="396.5" y="868.6606">hereda de</text></g><!--MD5=[fe7bc533d2031984485bfd9a6484a9d3]
+reverse link EB to ECL--><g id="link_EB_ECL"><path codeLine="128" d="M477.29,823.8538 C478.03,824.4438 478.76,825.0238 479.5,825.5938 C591.24,912.3838 740.47,980.0538 839.4,1019.4838 " fill="none" id="EB-backto-ECL" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="472.66,829.1038,462.2,810.6737,481.87,818.5638,472.66,829.1038" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="538.5" y="868.6606">hereda de</text></g><!--MD5=[f82ccabe21280e41918670b86a291b96]
+link INIT to EB--><g id="link_INIT_EB"><path codeLine="130" d="M395.5,552.8538 C395.5,574.6038 395.5,599.7938 395.5,624.1338 " fill="none" id="INIT-to-EB" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="395.5,629.3138,399.5,620.3138,395.5,624.3138,391.5,620.3138,395.5,629.3138" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="396.5" y="595.6606">exporta</text></g><!--MD5=[5757dc8fd5539d846a365bd574714a07]
+link INIT to EC--><g id="link_INIT_EC"><path codeLine="131" d="M316.04,552.8538 C293.77,574.3638 272.41,600.5538 260.5,629.5938 C227.46,710.1938 237.85,741.4838 260.5,825.5938 C267.07,849.9938 276.9,874.4738 288.32,897.9038 " fill="none" id="INIT-to-EC" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="290.62,902.5838,290.2483,892.7419,288.4183,898.0946,283.0656,896.2646,290.62,902.5838" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="261.5" y="732.1606">exporta</text></g><!--MD5=[5f21debba9475000bb1f48e841ea7112]
+link INIT to ECL--><g id="link_INIT_ECL"><path codeLine="132" d="M548.03,515.9638 C676.47,538.8938 846.28,577.9038 891.5,629.5938 C934.93,679.2238 943.69,863.0638 944.93,973.1738 " fill="none" id="INIT-to-ECL" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="944.99,978.3638,948.9127,969.3298,944.9471,973.3639,940.913,969.3984,944.99,978.3638" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="940.5" y="732.1606">exporta</text></g><!--MD5=[f26f1e902918e7bbfbb1924fbd91f202]
+link SETUP to INIT--><g id="link_SETUP_INIT"><path codeLine="134" d="M395.5,348.1838 C395.5,372.1537 395.5,400.3038 395.5,425.2138 " fill="none" id="SETUP-to-INIT" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="395.5,430.4838,399.5,421.4838,395.5,425.4838,391.5,421.4838,395.5,430.4838" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="396.5" y="396.6606">configura paquete</text></g><!--MD5=[9b9ff87917b32006f3ba3c496f939614]
+link REQ to SETUP--><g id="link_REQ_SETUP"><path codeLine="135" d="M395.5,151.8637 C395.5,174.9738 395.5,203.5338 395.5,228.6738 " fill="none" id="REQ-to-SETUP" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="395.5,233.9937,399.5,224.9937,395.5,228.9937,391.5,224.9937,395.5,233.9937" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89" x="396.5" y="194.6606">dependencias</text></g><!--MD5=[ff11e64b087799182ef062d7e5a3964e]
+link DEMO to EC--><g id="link_DEMO_EC"><path codeLine="137" d="M1081.24,790.6637 C1055.66,802.6138 1028.85,814.7738 1003.5,825.5938 C847.53,892.2038 665.49,960.6138 541.54,1005.8238 " fill="none" id="DEMO-to-EC" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="536.79,1007.5538,546.6158,1008.2276,541.4873,1005.8405,543.8745,1000.712,536.79,1007.5538" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105" x="923.5" y="868.6606">usa en ejemplos</text></g><!--MD5=[e3e65a6267c16b496e7e89dd89f9eb0e]
+link DEMO to ECL--><g id="link_DEMO_ECL"><path codeLine="138" d="M1157.74,790.8638 C1130.83,823.9738 1097.27,865.4137 1067.5,902.5938 C1048.89,925.8338 1028.82,951.1238 1010.39,974.4238 " fill="none" id="DEMO-to-ECL" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1007.21,978.4438,1015.9334,973.8718,1010.3142,974.5241,1009.6619,968.905,1007.21,978.4438" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105" x="1103.5" y="868.6606">usa en ejemplos</text></g><!--MD5=[2e7824d179bf1b144b1a244128b23316]
+link CSV to DEMO--><g id="link_CSV_DEMO"><path codeLine="140" d="M1208.5,537.1538 C1208.5,571.6738 1208.5,620.0638 1208.5,659.2938 " fill="none" id="CSV-to-DEMO" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1208.5,664.5238,1212.5,655.5238,1208.5,659.5238,1204.5,655.5238,1208.5,664.5238" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="1209.5" y="595.6606">proporciona datos</text></g><!--MD5=[829a04997565e15807683fadc5ff2872]
+link GITIGNORE to CSV--><g id="link_GITIGNORE_CSV"><path codeLine="142" d="M1208.5,353.8138 C1208.5,383.6337 1208.5,418.7438 1208.5,445.9338 " fill="none" id="GITIGNORE-CSV" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="138" x="1209.5" y="396.6606">excluye archivos data</text></g><!--MD5=[ccc16249f10524a74553d882818dd71f]
+link GMN244 to DEMO--><g id="link_GMN244_DEMO"><path d="M809.96,687.9838 C833.68,655.0838 872.35,610.6138 919,591.0938 C946.47,579.5938 957.34,583.0038 986,591.0938 C1037.79,605.7138 1089.41,636.1438 1129.87,664.5638 " fill="none" id="GMN244-DEMO" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[5df9032c39da1d4232b89c8bc83877d6]
+@startuml
+title "ARQUITECTURA REAL - LIBRERÍA ESTADÍSTICA POO\nBasado en el código implementado"
+
+skinparam class {
+  BackgroundColor White
+  BorderColor #667eea
+  FontSize 10
+}
+
+top to bottom direction
+
+' ==================== ARCHIVOS REALES DEL PROYECTO ====================
+class "setup.py" as SETUP {
+  .. CONFIGURACIÓN EMPAQUETADO ..
+  + name: "estadisticas-poo"
+  + version: "1.0.0"
+  + packages: find_packages()
+  + install_requires: ["numpy", "pandas"]
+  + author: "Equipo Parcial-LP2"
+}
+
+class "requirements.txt" as REQ {
+  .. DEPENDENCIAS ..
+  numpy>=1.21.0
+  pandas>=1.3.0
+  jupyter>=1.0.0
+}
+
+class "estadisticas/__init__.py" as INIT {
+  .. EXPORTACIONES PÚBLICAS ..
+  from .EstadisticaBase import EstadisticaBase
+  from .estadistica_cuantitativa import EstadisticaCuantitativa
+  from .estadistica_cualitativa import EstadisticaCualitativa
+  ..
+  __all__ = [
+    'EstadisticaBase',
+    'EstadisticaCuantitativa', 
+    'EstadisticaCualitativa'
+  ]
+}
+
+' ==================== CLASES PRINCIPALES IMPLEMENTADAS ====================
+class "EstadisticaBase" as EB {
+  .. ATRIBUTOS ..
+  - datos: list
+  ..
+  .. MÉTODOS ABSTRACTOS ..
+  {abstract} + promedio()
+  {abstract} + minimo()
+  {abstract} + maximo()
+  {abstract} + resumen()
+  ..
+  .. MÉTODOS CONCRETOS ..
+  + cantidad_datos() → int
+  + tipo_datos() → str
+  + __init__(datos: list)
+}
+
+class "EstadisticaCuantitativa" as EC {
+  .. ATRIBUTOS PRIVADOS ..
+  - _datos_ordenados: list = None
+  ..
+  .. MÉTODOS PÚBLICOS PRINCIPALES ..
+  + media() → float
+  + mediana() → float
+  + moda() → list
+  + varianza(poblacional: bool = True) → float
+  + desviacion_estandar(poblacional: bool = True) → float
+  + rango() → float
+  + rango_intercuartilico() → float
+  + percentil(percentil: float) → float
+  + cuartiles() → tuple
+  + coeficiente_variacion() → float
+  ..
+  .. MÉTODOS PRIVADOS ..
+  - _ordenar_datos() → list
+  ..
+  .. MÉTODOS OBLIGATORIOS BASE ..
+  + promedio() → float
+  + minimo() → float
+  + maximo() → float
+  + resumen() → void
+}
+
+class "EstadisticaCualitativa" as ECL {
+  .. MÉTODOS ESPECÍFICOS ..
+  + moda() → list
+  + tabla_frecuencias() → dict
+  + frecuencia_relativa(valor: Any) → float
+  ..
+  .. MÉTODOS OBLIGATORIOS BASE ..
+  + promedio() → str
+  + minimo() → Any
+  + maximo() → Any
+  + resumen() → void
+}
+
+' ==================== ARCHIVOS DE USO Y PRUEBAS ====================
+class "demo_polimorfismo.py" as DEMO {
+  .. FUNCIONES PRINCIPALES ..
+  + mostrar_resumen(objeto_estadistico)
+  + demostrar_polimorfismo()
+  + main()
+  ..
+  .. IMPORTS REALES ..
+  from estadisticas import EstadisticaCuantitativa, EstadisticaCualitativa
+}
+
+class "datos_simulados.csv" as CSV {
+  .. ESTRUCTURA REAL ..
+  ID, Edad, Horas_trabajadas_por_semana
+  Ingreso_mensual_miles, Gasto_mensual_miles
+  Color_favorito, Ocupacion, Estado_civil, Genero
+}
+
+' ==================== ARCHIVOS DE CONFIGURACIÓN ====================
+class ".gitignore" as GITIGNORE {
+  .. ARCHIVOS EXCLUIDOS ..
+  __pycache__/
+  *.pyc
+  *.pyo
+  .env
+  datos_temporales/
+  *.csv
+}
+
+' ==================== RELACIONES REALES ====================
+EB <|- - EC : "hereda de"
+EB <|- - ECL : "hereda de"
+
+INIT - -> EB : "exporta"
+INIT - -> EC : "exporta" 
+INIT - -> ECL : "exporta"
+
+SETUP ..> INIT : "configura paquete"
+REQ ..> SETUP : "dependencias"
+
+DEMO - -> EC : "usa en ejemplos"
+DEMO - -> ECL : "usa en ejemplos"
+
+CSV - -> DEMO : "proporciona datos"
+
+GITIGNORE - - CSV : "excluye archivos data"
+
+note right of EB
+  EstadisticaBase.py
+  Clase abstracta base
+  Define interfaz común
+  - - -
+  Jean Franco
+end note
+
+note left of EC
+  estadistica_cuantitativa.py
+  12 algoritmos estadísticos
+  Caching con _ordenar_datos()
+  - - -
+  Hilary Penelope
+end note
+
+note right of ECL
+  estadistica_cualitativa.py
+  Análisis de frecuencias
+  Tablas distribucionales
+  - - -
+  María Fernanda
+end note
+
+note left of DEMO
+  demo_polimorfismo.py
+  Integración y pruebas
+  Demuestra polimorfismo
+  - - -
+  Piero César
+end note
+@enduml
+
+@startuml
+title "ARQUITECTURA REAL - LIBRERÍA ESTADÍSTICA POO\nBasado en el código implementado"
+
+skinparam class {
+  BackgroundColor White
+  BorderColor #667eea
+  FontSize 10
+}
+
+top to bottom direction
+
+class "setup.py" as SETUP {
+  .. CONFIGURACIÓN EMPAQUETADO ..
+  + name: "estadisticas-poo"
+  + version: "1.0.0"
+  + packages: find_packages()
+  + install_requires: ["numpy", "pandas"]
+  + author: "Equipo Parcial-LP2"
+}
+
+class "requirements.txt" as REQ {
+  .. DEPENDENCIAS ..
+  numpy>=1.21.0
+  pandas>=1.3.0
+  jupyter>=1.0.0
+}
+
+class "estadisticas/__init__.py" as INIT {
+  .. EXPORTACIONES PÚBLICAS ..
+  from .EstadisticaBase import EstadisticaBase
+  from .estadistica_cuantitativa import EstadisticaCuantitativa
+  from .estadistica_cualitativa import EstadisticaCualitativa
+  ..
+  __all__ = [
+  ]
+}
+
+class "EstadisticaBase" as EB {
+  .. ATRIBUTOS ..
+  - datos: list
+  ..
+  .. MÉTODOS ABSTRACTOS ..
+  {abstract} + promedio()
+  {abstract} + minimo()
+  {abstract} + maximo()
+  {abstract} + resumen()
+  ..
+  .. MÉTODOS CONCRETOS ..
+  + cantidad_datos() → int
+  + tipo_datos() → str
+  + __init__(datos: list)
+}
+
+class "EstadisticaCuantitativa" as EC {
+  .. ATRIBUTOS PRIVADOS ..
+  - _datos_ordenados: list = None
+  ..
+  .. MÉTODOS PÚBLICOS PRINCIPALES ..
+  + media() → float
+  + mediana() → float
+  + moda() → list
+  + varianza(poblacional: bool = True) → float
+  + desviacion_estandar(poblacional: bool = True) → float
+  + rango() → float
+  + rango_intercuartilico() → float
+  + percentil(percentil: float) → float
+  + cuartiles() → tuple
+  + coeficiente_variacion() → float
+  ..
+  .. MÉTODOS PRIVADOS ..
+  - _ordenar_datos() → list
+  ..
+  .. MÉTODOS OBLIGATORIOS BASE ..
+  + promedio() → float
+  + minimo() → float
+  + maximo() → float
+  + resumen() → void
+}
+
+class "EstadisticaCualitativa" as ECL {
+  .. MÉTODOS ESPECÍFICOS ..
+  + moda() → list
+  + tabla_frecuencias() → dict
+  + frecuencia_relativa(valor: Any) → float
+  ..
+  .. MÉTODOS OBLIGATORIOS BASE ..
+  + promedio() → str
+  + minimo() → Any
+  + maximo() → Any
+  + resumen() → void
+}
+
+class "demo_polimorfismo.py" as DEMO {
+  .. FUNCIONES PRINCIPALES ..
+  + mostrar_resumen(objeto_estadistico)
+  + demostrar_polimorfismo()
+  + main()
+  ..
+  .. IMPORTS REALES ..
+  from estadisticas import EstadisticaCuantitativa, EstadisticaCualitativa
+}
+
+class "datos_simulados.csv" as CSV {
+  .. ESTRUCTURA REAL ..
+  ID, Edad, Horas_trabajadas_por_semana
+  Ingreso_mensual_miles, Gasto_mensual_miles
+  Color_favorito, Ocupacion, Estado_civil, Genero
+}
+
+class ".gitignore" as GITIGNORE {
+  .. ARCHIVOS EXCLUIDOS ..
+  __pycache__/
+  *.pyc
+  *.pyo
+  .env
+  datos_temporales/
+  *.csv
+}
+
+EB <|- - EC : "hereda de"
+EB <|- - ECL : "hereda de"
+
+INIT - -> EB : "exporta"
+INIT - -> EC : "exporta" 
+INIT - -> ECL : "exporta"
+
+SETUP ..> INIT : "configura paquete"
+REQ ..> SETUP : "dependencias"
+
+DEMO - -> EC : "usa en ejemplos"
+DEMO - -> ECL : "usa en ejemplos"
+
+CSV - -> DEMO : "proporciona datos"
+
+GITIGNORE - - CSV : "excluye archivos data"
+
+note right of EB
+  EstadisticaBase.py
+  Clase abstracta base
+  Define interfaz común
+  - - -
+  Jean Franco
+end note
+
+note left of EC
+  estadistica_cuantitativa.py
+  12 algoritmos estadísticos
+  Caching con _ordenar_datos()
+  - - -
+  Hilary Penelope
+end note
+
+note right of ECL
+  estadistica_cualitativa.py
+  Análisis de frecuencias
+  Tablas distribucionales
+  - - -
+  María Fernanda
+end note
+
+note left of DEMO
+  demo_polimorfismo.py
+  Integración y pruebas
+  Demuestra polimorfismo
+  - - -
+  Piero César
+end note
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
