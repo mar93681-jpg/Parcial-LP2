@@ -115,5 +115,3 @@ classDiagram
     Main ..> EstadisticaCualitativa : utiliza
 
 
-
-![Diagrama de Arquitectura](arquitectura.svg)
