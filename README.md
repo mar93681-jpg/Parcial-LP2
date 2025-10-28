@@ -93,7 +93,6 @@ classDiagram
 
     class EstadisticaBase {
         <<abstract>>
-        +datos
         +cantidad_datos()
         +tipo_datos()
         +resumen()*
