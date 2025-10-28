@@ -33,12 +33,12 @@
 
 ## 👥 Integrantes del grupo
 
-| Integrante   | Aporte   |
-|---------------|----------|
-| Malvacedo Quiñonez, Jean Franco  | Tarea 1: Arquitectura y Clase Base (25%)  |
-| Cruz Cruz, Hilary Penelope       | Tarea 2: Estadísticas Cuantitativas (25%)  |
-| Chávez Mendoza, Maria Fernanda   | Tarea 3: Estadísticas Cualitativas (25%)  |
-| Mejia Auccapoma, Piero Cesar     | Tarea 4: Integración, Polimorfismo y Pruebas (25%)  |
+| Integrante   | Usuario   | Aporte   |
+|---------------|----------|----------|
+| Malvacedo Quiñonez, Jean Franco  | Solitario03  | Tarea 1: Arquitectura y Clase Base (25%)  |
+| Cruz Cruz, Hilary Penelope       | stella5555  | Tarea 2: Estadísticas Cuantitativas (25%)  |
+| Chávez Mendoza, Maria Fernanda   | mar93681-jpg  | Tarea 3: Estadísticas Cualitativas (25%)  |
+| Mejia Auccapoma, Piero Cesar     | PC-011  | Tarea 4: Integración, Polimorfismo y Pruebas (25%)  |
 
 ---
 
