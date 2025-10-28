@@ -78,7 +78,8 @@ El proyecto está dividido en tres módulos:
 
  ## Diagrama de Clases (UML)
  
- ```classDiagram
+ ```
+classDiagram
     direction TB  %% arriba → abajo
 
     class EstadisticaBase {
