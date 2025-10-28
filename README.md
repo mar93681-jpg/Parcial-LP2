@@ -27,7 +27,7 @@
 
 **Fecha de entrega:** 28 de octubre (23:55 h)  
 **Fecha de presentación:** 30 de octubre  
-[Presentación](https://mar93681-jpg.github.io/Parcial-LP2/)
+[Presentación 👩‍🏫](https://mar93681-jpg.github.io/Parcial-LP2/)
 
 ---
 
